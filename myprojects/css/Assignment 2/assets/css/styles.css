@@ -1,0 +1,106 @@
+/**
+ * @author : HelithaSri
+ * @email : helitha.pravin@gmail.com
+ * @create date : 2021-12-14  00:10
+ * @modify date : 2021-12-14  02:13
+ */
+
+body > header {
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  position: relative;
+  box-shadow: 5px 6px 10px 1px rgb(0 0 0 / 20%);
+  font-family: "Readex Pro", sans-serif;
+  z-index: 1;
+  min-width: 735px;
+}
+
+header > img {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  margin: auto;
+}
+
+header > nav {
+  position: absolute;
+  right: 30px;
+  margin-top: 9px;
+  font-size: 20px;
+}
+
+header > nav > ul {
+  list-style: none;
+}
+
+header > nav > ul > li {
+  display: inline;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+body > main {
+  position: relative;
+}
+
+main > nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0%;
+  margin: auto;
+  width: 300px;
+  color: white;
+  background-color: rgb(76, 0, 130);
+  font-family: "Readex Pro", sans-serif;
+  font-size: 20px;
+}
+
+main > nav > ul {
+  list-style: none;
+}
+
+main > nav > ul > li {
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+main > section {
+  margin-left: 300px;
+  padding-bottom: 15px;
+}
+
+main > section > div {
+  text-align: center;
+}
+
+main > section > div > img {
+  width: 32%;
+  border: 1px solid red;
+  margin-top: 10px;
+}
+
+main > section > p {
+  margin-left: 2%;
+  margin-right: 2%;
+  font-family: "Arimo", sans-serif;
+}
+
+body > footer {
+  position: relative;
+  height: 60px;
+  background-color: rgb(128, 128, 128);
+  margin-top: -10px;
+  min-width: 735px;
+}
+
+footer > p {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-family: "Readex Pro", sans-serif;
+  color: white;
+}

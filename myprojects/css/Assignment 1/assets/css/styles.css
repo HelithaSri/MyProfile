@@ -1,0 +1,153 @@
+/**
+ * @author : HelithaSri
+ * @email : helitha.pravin@gmail.com
+ * @create date : 2021-12-11  17:13
+ * @modify date : 2021-12-13  09:55
+ */
+
+body > section {
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+}
+
+body > section:nth-child(1) {
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 1, 1);
+}
+
+body > section:nth-child(2) {
+  top: 0;
+  right: 0;
+  background-color: rgb(0, 128, 1);
+}
+
+body > section:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  background-color: rgb(252, 166, 1);
+}
+
+body > section:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 20, 148);
+}
+
+body > div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+}
+
+body > div:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 100%;
+}
+
+body > div:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 100%;
+}
+
+body > div:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 100%;
+}
+
+body > div:nth-of-type(4) {
+  bottom: 0;
+  left: 0;
+  border-top-right-radius: 100%;
+}
+
+body > div:nth-of-type(5) {
+  width: 150px;
+  height: 75px;
+  /* top: 0;
+  right: 50%;
+  margin-right: -75px; */
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+body > div:nth-of-type(6) {
+  width: 150px;
+  height: 75px;
+  /* bottom: 0;
+  right: 50%;
+  margin-right: -75px; */
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+body > section > div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  /* top: 50%;
+  left: 50%;
+  margin: -75px 0 0 -75px; */
+  border-radius: 100px;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+body > section > div > div {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  /* top: 50%;
+  left: 50%;
+  margin: -37.5px 0 0 -37.5px; */
+  background-color: rgb(255, 1, 1);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+body > div:nth-of-type(7) {
+  /* top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -75px; */
+
+  /* Easiest and correct way to center the elements */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+body > div:nth-of-type(7) > div {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* margin: -37.5px 0 0 -37.5px; */
+  margin: auto;
+  border-radius: 100px;
+  background-color: rgb(255, 1, 1);
+}
