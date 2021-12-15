@@ -44,7 +44,7 @@ header > nav > ul > li:hover {
 }
 
 main > section:nth-child(1) {
-  background-image: url("/assets/img/covers.png");
+  background-image: url("../assets/img/covers.png");
   height: 857px;
   background-position-x: right;
   background-repeat: no-repeat;
