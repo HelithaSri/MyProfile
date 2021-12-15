@@ -119,4 +119,5 @@ main > section:nth-child(1) > div > div > div > a > svg {
 section:nth-child(1) > div > div > div > a > svg:hover {
   fill: #fec51c;
   cursor: pointer;
+  fill: red;
 }
