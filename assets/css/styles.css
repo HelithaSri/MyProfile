@@ -109,7 +109,7 @@ main > section:nth-child(1) > div > div > div {
   margin-left: -2px;
 }
 
-main > section:nth-child(1) > div > div > div > a{
+main > section:nth-child(1) > div > div > div > a {
   all: initial;
 }
 
@@ -118,16 +118,14 @@ main > section:nth-child(1) > div > div > div > a > svg {
   height: 50px;
   fill: white;
   margin-right: 10px;
-  
 }
 
 section:nth-child(1) > div > div > div > a > svg:hover {
   fill: #fec51c;
   cursor: pointer;
-
 }
 
-section:nth-child(1) > div > div > div > a > svg:visited{
+section:nth-child(1) > div > div > div > a > svg:visited {
   fill: #fec51c;
   cursor: pointer;
 }
