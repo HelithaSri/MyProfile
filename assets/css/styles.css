@@ -2,8 +2,7 @@
  * @author : HelithaSri
  * @email : helitha.pravin@gmail.com
  * @create date : 2021-12-14  19:45
- * @modify date : 2021-12-15  16:10
- * @desc [description]
+ * @modify date : 2021-12-19  18:50
  */
 
 * {
@@ -11,18 +10,21 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body > header {
-  position: relative;
+  position: r;
   height: 80px;
   background-color: rgb(52, 89, 180);
   box-shadow: 5px 6px 10px 1px rgba(0, 0, 0, 0.062);
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header > nav {
-  position: absolute;
+  /* position: absolute;
   right: 0;
   left: 0;
-  margin: auto;
+  margin: auto; */
   font-size: 26px;
   font-weight: 700;
   color: rgb(255, 255, 255);
