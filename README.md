@@ -13,7 +13,7 @@
   ![My Skill Section Img](assets/img/screenshot/Education.png)
 
 - **My Portfolio Section**
-  ![My Skill Section Img](assets/img/screenshot/portfolio.png)
+  ![My Skill Section Img](assets/img/screenshot/portfolio.jpg)
 
 - **My Activities Section**
 ![My Skill Section Img](assets/img/screenshot/activites.png)
