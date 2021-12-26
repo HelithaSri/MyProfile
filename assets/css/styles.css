@@ -10,7 +10,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body > header {
-  position: r;
+  position: relative;
   height: 80px;
   background-color: rgb(52, 89, 180);
   box-shadow: 5px 6px 10px 1px rgba(0, 0, 0, 0.062);

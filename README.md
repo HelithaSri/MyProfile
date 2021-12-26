@@ -1,9 +1,4 @@
-# This is my Profile
-test one
-
-## test one
-
-![Image](assets/img/Portfolio_PSD.jpg)
-
-[Link To Reffer MD](https://guides.github.com/features/mastering-markdown/)
-
+# Portfolio
+## Overview Of My Profile
+- Home Section
+  ![Home Section Img](assets/img/screenshot/Home.png)
