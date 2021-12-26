@@ -131,3 +131,30 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   fill: #fec51c;
   cursor: pointer;
 }
+
+#sec-about {
+  background-color: #fec51c;
+}
+
+#sec-about > h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 30px;
+  font-size: 86px;
+  position: relative;
+  color: rgba(34, 34, 34, 0.322);
+  z-index: 100;
+}
+
+#sec-about > h1::after {
+  content: "ABOUT ME";
+  right: 0;
+  left: 0;
+  margin: auto;
+  color: rgb(0, 102, 255);
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  padding-top: 30px;
+  font-size: 70px;
+}
