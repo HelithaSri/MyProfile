@@ -1,0 +1,235 @@
+/**
+ * @author : HelithaSri
+ * @email : helitha.pravin@gmail.com
+ * @create date : 2021-12-14  00:10
+ * @modify date : 2021-12-26  13:33
+ */
+
+body > header {
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  position: relative;
+  box-shadow: 5px 6px 10px 1px rgb(0 0 0 / 20%);
+  font-family: "Readex Pro", sans-serif;
+  z-index: 1;
+}
+
+header > img {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  margin: auto;
+}
+
+header > nav {
+  position: absolute;
+  right: 30px;
+  margin-top: 9px;
+  font-size: 20px;
+}
+
+header > nav > ul {
+  list-style: none;
+}
+
+header > nav > ul > li {
+  display: inline;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+body > main {
+  position: relative;
+}
+
+main > nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0%;
+  margin: auto;
+  width: 300px;
+  color: white;
+  background-color: rgb(76, 0, 130);
+  font-family: "Readex Pro", sans-serif;
+  font-size: 20px;
+}
+
+main > nav > ul {
+  list-style: none;
+}
+
+main > nav > ul > li {
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+main > section {
+  margin-left: 300px;
+  padding-bottom: 15px;
+}
+
+main > section > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+main > section > div > img {
+  width: 32%;
+  /* border: 1px solid red; */
+  /* margin-top: 10px; */
+  /* background-size: cover; */
+  
+}
+
+main > section > p {
+  margin-left: 2%;
+  margin-right: 2%;
+  font-family: "Arimo", sans-serif;
+  font-size: 20px;
+}
+
+body > footer {
+  position: relative;
+  height: 60px;
+  background-color: rgb(128, 128, 128);
+  /* margin-top: -10px; */
+}
+
+footer > p {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-family: "Readex Pro", sans-serif;
+  color: white;
+  line-height: 30px;
+}
+
+/* Mobile Responsive Start */
+
+@media all and (max-width:768px){
+  
+  body > header {
+    height: 80px;
+  }
+
+  header > img{
+    left: 0;
+    right: 0;
+    top: 10px;
+    bottom: 40px;
+    width: 150px;
+  }
+
+  header > nav {
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    
+  }
+
+  header > nav > ul{
+    padding-left: 0px;
+  }
+
+  header > nav > ul > li{
+    margin-right: 15px;
+  }
+
+  main > nav{
+    display: none;
+  }
+
+  main > section {
+    margin-left: auto;
+  }
+
+  main > section > div {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  main > section > div > img {
+    width: 100vw;
+    
+  }
+
+  main > section > p{
+    font-size: 12px;
+  }
+
+  footer > p{
+    line-height: 30px;
+  }
+
+}
+
+/* Mobile Responsive End */
+
+/* Tablet Responsive Start */
+
+@media all and (min-width:768px) and (max-width:1020px){
+  body > header {
+    height: 80px;
+  }
+  
+  header > img{
+    left: 0;
+    right: 0;
+    top: 10px;
+    bottom: 40px;
+    width: 200px;
+  }
+  
+  header > nav {
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    
+  }
+  
+  header > nav > ul{
+    padding-left: 0px;
+  }
+  
+  header > nav > ul > li{
+    margin-right: 15px;
+  }
+  
+  main > nav{
+    display: none;
+  }
+  
+  main > section {
+    margin-left: auto;
+  }
+
+  main > section > div {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  main > section > div > img {
+    width: 100vw;
+    
+  }
+
+  main > section > p{
+    font-size: 15px;
+  }
+
+  footer > p{
+    line-height: 30px;
+  }
+}
