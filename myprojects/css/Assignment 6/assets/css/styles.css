@@ -1,0 +1,42 @@
+section{
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  height: 310px;
+}
+
+div{
+  height: 50px;
+  width: 200px;
+  margin-top: 10px;
+  margin-left: -150px;
+  background: rgb(213, 103, 241);
+  text-align: left;
+  padding-left: 10px;
+  line-height: 50px;
+  transition-property: all;
+  transition-duration: 2s;
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+div:hover{
+  width: 200px;
+  margin-left: 0px;
+  background: gold;
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+div > i{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 30px;
+}
+
