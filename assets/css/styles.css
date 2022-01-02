@@ -138,7 +138,7 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   color: #ffffff;
 }
 
-.title-div{
+.title-div {
   position: relative;
   height: 219px;
 }
@@ -155,7 +155,7 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   left: 0;
   top: 0;
 }
-.title-div > h1:nth-child(1) > span{
+.title-div > h1:nth-child(1) > span {
   color: #fec51c0c;
 }
 
@@ -170,7 +170,7 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   text-align: center;
   font-size: 70px;
 }
-.title-div > h1:nth-child(2) > span{
+.title-div > h1:nth-child(2) > span {
   color: #fec51c;
 }
 /* #sec-about > h1::before {
@@ -185,5 +185,62 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   margin: 0;
   padding-top: 30px;
   font-size: 70px;
-  
 } */
+
+#info-div{
+  /* display: contents; */
+  position: relative;
+}
+
+#info-div > table {
+  margin-left: 145px;
+  /* border: 1px solid red; */
+}
+
+#info-div > table > caption {
+  text-align: left;
+  font-size: 30px;
+}
+
+.remove-list {
+  list-style: none;
+  padding: 0px;
+  font-size: 20px;
+  margin: 0;
+}
+
+.remove-list > li,
+address > li {
+  margin-bottom: 22px;
+}
+
+.remove-list > address {
+  font-style: normal;
+}
+
+.remove-list > li > span {
+  font-weight: 700;
+}
+
+.remove-list > address > li > span > a {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#right-list {
+  margin-left: 84px;
+}
+
+#info-right-div{
+  background-color: rebeccapurple;
+  border: 2px solid red;
+  height: 300px;
+  width: 750px;
+  position: absolute;
+  top: 0;
+  bottom: 0%;
+  right: 155px;
+  left: 1;
+  margin: auto;
+}
