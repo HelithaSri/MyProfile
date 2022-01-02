@@ -233,14 +233,27 @@ address > li {
 }
 
 #info-right-div{
-  background-color: rebeccapurple;
-  border: 2px solid red;
+  /* background-color: rebeccapurple; */
+  /* border: 2px solid red; */
   height: 300px;
-  width: 750px;
+  width: 760px;
   position: absolute;
-  top: 0;
+  top: 50px;
   bottom: 0%;
   right: 155px;
   left: 1;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#info-right-div > div{
+  width: 357px;
+  height: 169px;
+  background: #212428;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+  
 }
