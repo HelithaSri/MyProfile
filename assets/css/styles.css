@@ -132,12 +132,15 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   cursor: pointer;
 }
 
+/* About Section Start */
+
 #sec-about {
   background: linear-gradient(0deg, #212428, #212428);
   height: 650px;
   color: #ffffff;
 }
 
+/* Title Style Start */
 .title-div {
   position: relative;
   height: 219px;
@@ -173,6 +176,9 @@ section:nth-child(1) > div > div > div > a > svg:visited {
 .title-div > h1:nth-child(2) > span {
   color: #fec51c;
 }
+
+/* Title Style End */
+
 /* #sec-about > h1::before {
   z-index: 1;
   content: "ABOUT ME........";
@@ -295,7 +301,7 @@ address > li {
   height: 300px;
   width: 760px;
   position: absolute;
-  top: 50px;
+  top: 0px;
   bottom: 0%;
   right: 155px;
   left: 1;
@@ -357,4 +363,33 @@ address > li {
   left: 127px;
   bottom: -15px;
   display: block;
+}
+/* About Section End */
+
+#sec-skill{
+  height: 100vh;
+  background-color: #212428;
+  position: relative;
+}
+
+#slider{
+  /* background-color: red; */
+  height: 322px;
+  width: 1201px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 30px;
+}
+
+#slider > div{
+  height: 268px;
+  width: 242px;
+  background-color: #d3a51a;
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
 }
