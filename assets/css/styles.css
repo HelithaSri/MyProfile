@@ -386,10 +386,54 @@ address > li {
   border-radius: 30px;
 }
 
-#slider > div{
+.slid-div{
+  position: relative;
   height: 268px;
   width: 242px;
-  background-color: #d3a51a;
+  background: #212428;
   border-radius: 30px;
   box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* #slider > div > img{
+  display: block;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  
+} */
+
+.img-div{
+  
+  height: 192px;
+  width: 192px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* border: 5px solid #ffffff; */
+  /* background-image: url("assets/img/skill_img/java.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img_1{
+  background-image: url("../img/skill_img/java.png");
+}
+
+#img_2{
+  background-image: url("../img/skill_img/mySql.png");
+}
+
+#img_3{
+  background-image: url("../img/skill_img/html.png");
+}
+
+#img_4{
+  background-image: url("../img/skill_img/css.png");
 }
