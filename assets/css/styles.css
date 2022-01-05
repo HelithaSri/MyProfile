@@ -136,7 +136,8 @@ section:nth-child(1) > div > div > div > a > svg:visited {
 
 #sec-about {
   background: linear-gradient(0deg, #212428, #212428);
-  height: 650px;
+  /* height: 650px; */
+  height: 575px;
   color: #ffffff;
 }
 
@@ -368,8 +369,10 @@ address > li {
 }
 /* About Section End */
 
+/* Skill Section Start */
 #sec-skill {
-  height: 70vh;
+  /* height: 70vh; */
+  height: 550px;
   background-color: #212428;
   position: relative;
 }
@@ -491,3 +494,5 @@ address > li {
 #img_10 {
   background-image: url("../img/skill_img/adobe\ illustrator.png");
 }
+
+/* Skill Section End */
