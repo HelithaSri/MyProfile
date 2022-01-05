@@ -1,0 +1,52 @@
+section {
+  height: 100vh;
+  margin: -8px;
+  padding: 75px;
+}
+
+section > div {
+  position: relative;
+  background-color: red;
+  height: 125px;
+  width: 250px;
+  border-radius: 30px;
+  animation-name: animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+}
+
+@keyframes animation {
+  0%{
+    background-color: aqua;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  25%{
+    background-color: rgb(30, 255, 0);
+    top: 0;
+    left: 600px;
+    transform: rotate(90deg);
+  }
+  50%{
+    background-color: rgb(24, 10, 221);
+    top: 600px;
+    left: 600px;
+    transform: rotate(180deg);
+  }
+
+  75%{
+    background-color: rgb(132, 0, 255);
+    top: 600px;
+    left: 0;
+    transform: rotate(270deg);
+  }
+  100% {
+    background-color: rgb(208, 255, 0);
+    left: 0;
+    top: 0;
+    transform: rotate(360deg);
+  }
+}
