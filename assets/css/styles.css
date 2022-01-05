@@ -496,3 +496,11 @@ address > li {
 }
 
 /* Skill Section End */
+
+/* Education Section Start */
+#sec-edu{
+  height: 100vh;
+  background-color: #212428;
+  position: relative;
+  
+}
