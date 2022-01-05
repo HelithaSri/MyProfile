@@ -157,6 +157,7 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   right: 0;
   left: 0;
   top: 0;
+  user-select: none;
 }
 .title-div > h1:nth-child(1) > span {
   color: #fec51c0c;
@@ -172,6 +173,7 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   position: absolute;
   text-align: center;
   font-size: 70px;
+  user-select: none;
 }
 .title-div > h1:nth-child(2) > span {
   color: #fec51c;
@@ -366,13 +368,13 @@ address > li {
 }
 /* About Section End */
 
-#sec-skill{
+#sec-skill {
   height: 100vh;
   background-color: #212428;
   position: relative;
 }
 
-#slider{
+#slider {
   /* background-color: red; */
   height: 322px;
   width: 1201px;
@@ -384,9 +386,38 @@ address > li {
   right: 0;
   margin: auto;
   border-radius: 30px;
+  overflow: hidden;
 }
 
-.slid-div{
+#slid-con-div {
+  /* width: 2948px; */
+  width: 3000px;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-shrink: 0;
+  flex-basis: 3107px;
+  margin-left: 1828px;
+  /* animation-name: scroll;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  animation: scroll 10s linear alternate;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+@keyframes scroll {
+  from {
+    margin-left: 1828px;
+  }
+  to {
+    margin-left: -1821px;
+  }
+}
+
+.slid-div {
   position: relative;
   height: 268px;
   width: 242px;
@@ -404,8 +435,7 @@ address > li {
   
 } */
 
-.img-div{
-  
+.img-div {
   height: 192px;
   width: 192px;
   /* background-color: red; */
@@ -422,18 +452,42 @@ address > li {
   background-size: contain;
 }
 
-#img_1{
+#img_1 {
   background-image: url("../img/skill_img/java.png");
 }
 
-#img_2{
+#img_2 {
   background-image: url("../img/skill_img/mySql.png");
 }
 
-#img_3{
+#img_3 {
   background-image: url("../img/skill_img/html.png");
 }
 
-#img_4{
+#img_4 {
   background-image: url("../img/skill_img/css.png");
+}
+
+#img_5 {
+  background-image: url("../img/skill_img/spring.png");
+}
+
+#img_6 {
+  background-image: url("../img/skill_img/python.png");
+}
+
+#img_7 {
+  background-image: url("../img/skill_img/js.png");
+}
+
+#img_8 {
+  background-image: url("../img/skill_img/hibernate.png");
+}
+
+#img_9 {
+  background-image: url("../img/skill_img/ps.png");
+}
+
+#img_10 {
+  background-image: url("../img/skill_img/adobe\ illustrator.png");
 }
