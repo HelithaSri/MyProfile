@@ -549,7 +549,7 @@ address > li {
   content: "";
   font-weight: 900;
   font-weight: 300;
-  
+
   background: #fec51c;
   display: block;
   border-radius: 100%;
@@ -614,6 +614,17 @@ address > li {
   border-radius: 20px; */
 }
 
+#timeline > div:nth-of-type(1) > span {
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  top: 5px;
+  left: 15px;
+  font-size: 14px;
+  word-wrap: break-word;
+  /* background-color: red; */
+}
+
 #timeline > div:nth-of-type(2) {
   /* width: 430px;
   height: 167px;
@@ -645,4 +656,30 @@ address > li {
   box-shadow: 0px 0px 20px 5px rgb(52 51 51 / 50%);
   border-radius: 12px;
   margin-top: -141px;
+}
+
+#timeline > div:nth-of-type(2) > span:nth-child(1) {
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  top: 20px;
+  left: 12px;
+  font-size: 24px;
+}
+
+#timeline > div:nth-of-type(2) > span:nth-child(2) {
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  top: 82px;
+  left: 12px;
+  width: 406px;
+  height: 74px;
+  /* background-color: red; */
+  /* line-height: 74px; */
+  word-wrap: break-word;
+  font-size: 18px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
