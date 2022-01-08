@@ -848,7 +848,7 @@ address > li {
 
 /* Activity Section Start */
 #sec-activity {
-  height: 776px;
+  height: 835px;
   background-color: #212428;
   position: relative;
 }
@@ -866,20 +866,19 @@ address > li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width:  1550px;
-  
+  width: 1550px;
 }
 
 .activity_card_div {
   position: relative;
   width: 341px;
-  height: 410px;
+  height: 469px;
   background: #212428;
-  box-shadow: 0px 0px 10px 10px rgba(196, 207, 222, 0.05);
+  box-shadow: 0px 0px 10px 10px rgb(196 207 222 / 5%);
   border-radius: 30px;
 }
 
-.activity_card_div:hover{
+.activity_card_div:hover {
   transform: scale(1.1);
 }
 
@@ -889,32 +888,38 @@ address > li {
   left: 0;
   right: 0;
   margin: auto;
-  width: 298.04px;
-  height: 202px;
+  /* width: 298.04px;
+  height: 202px; */
+  width: 300px;
+  height: 300px;
   border-radius: 15px;
   background-color: #c4cfde;
 }
 
 .activity_card_div > div:nth-child(2) {
   position: relative;
-  bottom: -85px;
+  bottom: -25px;
   left: 0;
   right: 0;
   margin: auto;
-  width: 298.04px;
+  width: 300.04px;
   height: 101px;
   /* background-color: #1a54a7; */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: bold;
   font-size: 30px;
   font-weight: 700;
   color: #e5e5e5;
+
+  bottom: 0px;
+  top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#about_btn{
+#about_btn {
   position: relative;
   top: 55px;
   bottom: 0;
@@ -925,24 +930,24 @@ address > li {
   width: max-content;
 }
 
-.activity_img{
+.activity_img {
   background-repeat: no-repeat;
-  background-size: 100%;
   background-position: 50%;
+  background-size: cover;
 }
 
-#activity_img1{
-  background-image: url(../img/Portfolio_PSD.jpg);
+#activity_img1 {
+  background-image: url(../img/activities/case\ 1.jpg);
 }
 
-#activity_img2{
-  background-image: url(../img/parking\ System.jpg);
+#activity_img2 {
+  background-image: url(../img/activities/case\ 2.jpg);
 }
 
-#activity_img3{
-  background-image: url(../img/RentalSystem.jpg);
+#activity_img3 {
+  background-image: url(../img/activities/case\ 3.jpg);
 }
 
-#activity_img4{
-  background-image: url(../img/RentalSystem.jpg);
+#activity_img4 {
+  background-image: url(../img/activities/case\ 4.jpg);
 }
