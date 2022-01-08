@@ -976,8 +976,8 @@ address > li {
 /* Contact Us Section Start */
 
 #sec-contact {
-  /* height: 1000px; */
-  height: 945px;
+  height: 1025px;
+  /* height: 945px; */
   background-color: #212428;
   position: relative;
 }
@@ -1287,5 +1287,58 @@ textarea {
   color: #fec51c;
 }
 
+#sec-contact > hr {
+  margin-top: 50px;
+  width: 1612px;
+  margin-bottom: 50px;
+}
+
 /* Contact Us Section End */
 
+/* Footer Start */
+
+#footer {
+  background-color: #212428;
+  height: 250px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #0e76a8; */
+}
+
+#pic {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #fec51c;
+  border-radius: 100%;
+  background-image: url(../img/Dp.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+
+#footer_p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 29px;
+  /* text-align: center; */
+  color: #ffffff;
+  
+}
+
+#footer_p > a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#footer_p > a:visited{
+  text-decoration: none;
+  color: #ffffff;
+}
