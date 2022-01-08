@@ -8,8 +8,22 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
+#top button {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #fec51c;
+  z-index: 100;
+}
+
 body > header {
   position: relative;
   height: 80px;
@@ -42,7 +56,7 @@ header > nav > ul > li {
   cursor: pointer;
 }
 
-header > nav > ul > li > a{
+header > nav > ul > li > a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -961,8 +975,317 @@ address > li {
 
 /* Contact Us Section Start */
 
-#sec-contact{
-  height: 835px;
+#sec-contact {
+  /* height: 1000px; */
+  height: 945px;
   background-color: #212428;
   position: relative;
 }
+
+.wrap {
+  display: flex;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1530px;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: #0e76a8; */
+}
+
+#contact_left_cont_div {
+  display: flex;
+  height: 715px;
+  width: max-content;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+
+#digital_div {
+  position: relative;
+  width: 749px;
+  height: 357.5px;
+  background: #212428;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+#digital_div > div:nth-child(1) {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  font-weight: 900;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4cfde;
+}
+
+#digital_div > div > p > span {
+  color: #fec51c;
+}
+
+#social_icon_div {
+  /* display: flex;
+  position: relative;
+  left: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: max-content; */
+
+  display: inline-flex;
+  position: relative;
+  left: 69px;
+  top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 608px;
+  height: max-content;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.icon-cont-div {
+  position: relative;
+  width: 79px;
+  height: 79px;
+  border-radius: 15px;
+
+  background: #212428;
+  box-shadow: -1px -1px 4px rgba(196, 207, 222, 0.2);
+}
+
+.icon-cont-div > a > svg {
+  position: relative;
+  top: 12px;
+  bottom: 0;
+  left: 14px;
+  right: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  fill: white;
+}
+
+#icon_1:hover {
+  background-color: #0e76a8;
+}
+
+#icon_2:hover {
+  background-color: #1da1f2;
+}
+
+#icon_3:hover {
+  background-color: #1c92fe;
+}
+
+#icon_4:hover {
+  background-color: #320032;
+}
+
+#icon_5:hover {
+  background-color: #fe1c1c;
+}
+
+/* .icon-cont-div > a > svg:hover {
+  fill: #fec51c;
+  cursor: pointer;
+}
+
+.icon-cont-div > a > svg:visited {
+  fill: #fec51c;
+  cursor: pointer;
+} */
+
+#bottom {
+  position: relative;
+  width: 749px;
+  /* height: 357.5px; */
+  /* background: #212428; */
+  /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25); */
+  border-radius: 20px;
+  display: block;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bottom_card {
+  width: 359px;
+  height: 329px;
+  background: #212428;
+  background: #212428;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+/* #bottom > div:nth-child(1) {
+  
+}
+
+#bottom > div:nth-child(2) {
+  width: 359px;
+  height: 329px;
+  background: #212428;
+  background: #212428;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+} */
+
+.icon_title {
+  position: relative;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_title > i {
+  font-size: 50px;
+  color: #c4cfde;
+  margin: 0;
+  /* margin-top: 40px; */
+}
+
+.icon_title > i:nth-child(2) {
+  position: absolute;
+  transform: rotate(45deg);
+  top: -8px;
+  color: #c4cfde;
+  font-size: 35px;
+  right: 145px;
+}
+
+.icon_title > h1 {
+  font-size: 50px;
+  color: #c4cfde;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.bottom_card > div:nth-child(2) {
+  position: relative;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #c4cfde;
+  bottom: -100px;
+}
+
+#contact_right_cont_div {
+  display: inline-flex;
+  align-items: center;
+  height: 715px;
+  width: max-content;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* border: 2px solid red; */
+  width: 749px;
+
+  background-color: #212428;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.form-row {
+  position: relative;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0px;
+  margin-left: 0px;
+  flex-basis: 45%;
+}
+
+.form-row > input,
+textarea {
+  width: 649px;
+  height: 54px;
+  font-size: 18px;
+  color: #ffffff80;
+  background-color: #191b1e;
+  box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  margin: 10px;
+  /* padding-left: 25px;
+  padding-right: 25px; */
+  text-indent: 20px;
+}
+
+textarea {
+  /* max-width: 649px; */
+  height: 240px;
+  overflow: unset;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.form-row > label {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  left: 35px;
+  margin-top: 31px;
+  z-index: 50;
+}
+
+.name_and_no {
+  display: flex;
+  flex-grow: 50px;
+  flex-grow: 50%;
+  justify-content: space-around;
+}
+
+.name_and_no .form-row #name,
+#number {
+  /* background-color: #0e76a8; */
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-indent: 10px;
+}
+
+.name_and_no > .form-row > label {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  left: 14px;
+  margin-top: -47px;
+  z-index: 50;
+}
+
+#msg_div {
+  /* background-color: #1c92fe; */
+}
+
+#send_msg_btn {
+  width: 649px;
+  height: 55px;
+  background: #212428;
+  box-shadow: 0px 3px 10px #000000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 25px;
+  color: #fec51c;
+}
+
+/* Contact Us Section End */
+
