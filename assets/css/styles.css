@@ -724,7 +724,6 @@ address > li {
 #right_side {
   width: 601px;
   height: 2070px;
-  /* background-color: #42fe1c; */
   display: inline-block;
   display: flex;
   flex-direction: column;
@@ -733,7 +732,6 @@ address > li {
 
 #text_div {
   height: 241px;
-  /* background-color: #1c76fe; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,26 +753,33 @@ address > li {
   background: #212428;
   box-shadow: 0px 4px 10px 10px rgba(196, 207, 222, 0.05);
   border-radius: 20px;
-  /* display: flex; */
 }
 
 .portfolio_img {
-  /* background-color: red; */
   border-radius: 20px 20px 0px 0px;
   height: 601px;
   background-repeat: no-repeat;
 }
 
 #port_img1 {
-  /* flex-grow: 0.5; */
+  background: url(../img/RentalSystem.jpg);
+}
+
+#port_img2 {
+  background: url(../img/blue\ ocean\ hotel.jpg);
+}
+
+#port_img3 {
+  background: url(../img/parking\ System.jpg);
+}
+
+#port_img4 {
   background: url(../img/Portfolio_PSD.jpg);
 }
 
 .portfolio_card > span {
-  /* flex-grow: 0.5; */
   position: relative;
   top: 20px;
-  /* background-color: rebeccapurple; */
   font-size: 15px;
   font-weight: 700;
   margin: 20px;
@@ -782,7 +787,6 @@ address > li {
 }
 
 .portfolio_card > span > i {
-  /* flex-grow: 0.5; */
   font-size: 15px;
   font-weight: 700;
   color: #e5e5e5;
@@ -793,8 +797,6 @@ address > li {
 }
 
 #port_title {
-  /* flex-grow: 5; */
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
