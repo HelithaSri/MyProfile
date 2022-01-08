@@ -839,3 +839,7 @@ address > li {
 #see_more_btn:hover {
   background-color: #d3a51a;
 }
+
+.portfolio_card:hover{
+  transform: scale(1.05);
+}
