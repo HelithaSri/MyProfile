@@ -52,7 +52,7 @@
 
 .flex {
   position: relative;
-  left: 20px;
+  left: 0;
   right: 0;
   margin-top: 0px;
   margin: auto;
@@ -62,15 +62,16 @@
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: center;
-  width: 1800px;
+  width: 1692px;
+  gap: 30px;
 }
 
-.flex > a{
+.flex > a {
   text-decoration: none;
   color: #c4cfde;
 }
 
-.flex > a:visited{
+.flex > a:visited {
   text-decoration: none;
   color: #c4cfde;
 }
@@ -83,8 +84,8 @@
   background: #212428;
   box-shadow: 0px 4px 10px 10px rgba(196, 207, 222, 0.05);
   border-radius: 20px;
-  margin-bottom: 50px;
-  margin-right: 45px;
+  /* margin-bottom: 50px;
+  margin-right: 45px; */
 }
 
 .portfolio_img {
@@ -165,11 +166,11 @@
 }
 
 #port_img11 {
-    background: url(../img/activities/A11.gif);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-  }
+  background: url(../img/activities/A11.gif);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
 
 .portfolio_card > span {
   position: relative;
