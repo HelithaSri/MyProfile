@@ -51,11 +51,6 @@
 /* Title Style End */
 
 .flex {
-  /* background-color: #fec51c; */
-  /* display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; */
-
   position: relative;
   left: 20px;
   right: 0;
@@ -69,6 +64,18 @@
   align-content: center;
   width: 1800px;
 }
+
+.flex > a{
+  text-decoration: none;
+  color: #c4cfde;
+}
+
+.flex > a:visited{
+  text-decoration: none;
+  color: #c4cfde;
+}
+
+/* card Style Start */
 
 .portfolio_card {
   width: 400px;
@@ -195,3 +202,5 @@
   color: #e5e5e5;
   margin: 20px;
 }
+
+/* card style end */
