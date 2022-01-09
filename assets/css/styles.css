@@ -10,8 +10,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
-button {
-}
+
 #top {
   position: fixed;
   top: 886px;
@@ -186,6 +185,7 @@ section:nth-child(1) > div > div > div > a > svg:visited {
   padding-top: 40px;
   font-size: 86px;
   position: absolute;
+  
   color: #c4cfde0a;
   z-index: 0;
   right: 0;
