@@ -901,6 +901,15 @@ address > li {
   width: 1550px;
 }
 
+#activity_container > a{
+  text-decoration: none;
+}
+
+#activity_container > a:visited{
+  text-decoration: none;
+  color: #c4cfde;
+}
+
 .activity_card_div {
   position: relative;
   width: 341px;
