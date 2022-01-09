@@ -902,6 +902,7 @@ address > li {
 
 #activity_container > a{
   text-decoration: none;
+  
 }
 
 #activity_container > a:visited{
@@ -1286,10 +1287,6 @@ textarea {
   left: 14px;
   margin-top: -47px;
   z-index: 50;
-}
-
-#msg_div {
-  /* background-color: #1c92fe; */
 }
 
 #send_msg_btn {

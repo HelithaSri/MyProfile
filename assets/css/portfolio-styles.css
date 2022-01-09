@@ -1,0 +1,157 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#sec-portfolio{
+  background-color: #212428;
+  height: 100vh;
+  position: relative;
+}
+
+/* Title Style Start */
+.title-div {
+  position: relative;
+  height: 219px;
+}
+
+.title-div > h1:nth-child(1) {
+  text-align: center;
+  margin: auto;
+  padding-top: 40px;
+  font-size: 86px;
+  position: absolute;
+  color: #c4cfde0a;
+  z-index: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  user-select: none;
+}
+.title-div > h1:nth-child(1) > span {
+  color: #fec51c0c;
+}
+
+.title-div > h1:nth-child(2) {
+  z-index: 1;
+  right: 0;
+  left: 0;
+  margin-top: 70px;
+  color: #c4cfde;
+  position: absolute;
+  text-align: center;
+  font-size: 70px;
+  user-select: none;
+}
+.title-div > h1:nth-child(2) > span {
+  color: #fec51c;
+}
+
+/* Title Style End */
+
+.flex {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-top: 0px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  width: 1692px;
+  gap: 30px;
+}
+
+.flex > a {
+  text-decoration: none;
+  color: #c4cfde;
+}
+
+.flex > a:visited {
+  text-decoration: none;
+  color: #c4cfde;
+}
+
+/* card Style Start */
+
+.portfolio_card {
+  width: 400px;
+  height: 600px;
+  background: #212428;
+  box-shadow: 0px 4px 10px 10px rgba(196, 207, 222, 0.05);
+  border-radius: 20px;
+  /* margin-bottom: 50px;
+  margin-right: 45px; */
+}
+
+.portfolio_img {
+  border-radius: 20px 20px 0px 0px;
+  width: 400px;
+  height: 400px;
+}
+
+#port_img1 {
+  background: url(../img/portfolio/blue\ ocean\ hotel.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img2 {
+  background: url(../img/portfolio/parking\ System.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img3 {
+  background: url(../img/portfolio/RentalSystem.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img4 {
+  background: url(../img/portfolio/Portfolio\ PSD.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.portfolio_card > span {
+  position: relative;
+  top: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 20px;
+  color: #fec51c;
+}
+
+.portfolio_card > span > i {
+  font-size: 15px;
+  font-weight: 700;
+  color: #e5e5e5;
+  transform: scaleX(-1);
+  margin-right: 7px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#port_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 137px;
+  font-size: 25px;
+  font-weight: 700;
+  word-wrap: break-word;
+  text-align: center;
+  color: #e5e5e5;
+  margin: 20px;
+}
+
+/* card style end */
