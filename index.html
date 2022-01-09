@@ -16,7 +16,7 @@
 
   <body>
     <!--Header Bar-->
-    <header>
+    <header id="sec-header">
       <nav>
         <ul>
           <li><a href="">Home</a></li>
@@ -505,7 +505,7 @@
             </div>
 
             <div class="form-row">
-              <textarea id="message" rows="10">
+              <textarea id="message" rows="5">
               </textarea>
               <label for="message">YOUR MESSAGE</label>
             </div>
@@ -520,8 +520,9 @@
       <hr>
       </section>
 
-      <div id="top">
-        <a href="#sec-contact"><button></button></a>
+      <div id="top" onclick="location.href='#sec-header'">
+        <i class="fas fa-arrow-up"></i>
+        <!-- <a href="#sec-header"><button></button></a> -->
       </div>
       
     </main>

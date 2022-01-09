@@ -10,18 +10,30 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
-
-#top button {
+button {
+}
+#top {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  top: 886px;
+  bottom: 25px;
+  right: 20px;
   margin: auto;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   background-color: #fec51c;
-  z-index: 100;
+  cursor: pointer;
+}
+
+#top > i {
+  position: relative;
+  top: 13px;
+  bottom: 0;
+  left: 14px;
+  right: 0;
+  margin: auto;
+  color: #000000;
+  font-size: 25px;
 }
 
 body > header {
@@ -1330,15 +1342,14 @@ textarea {
   line-height: 29px;
   /* text-align: center; */
   color: #ffffff;
-  
 }
 
-#footer_p > a{
+#footer_p > a {
   text-decoration: none;
   color: #ffffff;
 }
 
-#footer_p > a:visited{
+#footer_p > a:visited {
   text-decoration: none;
   color: #ffffff;
 }
