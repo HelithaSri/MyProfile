@@ -4,9 +4,10 @@
   scroll-behavior: smooth;
 }
 
-#sec-activites{
-    background-color: #212428;
-    height: 100vh;
+#sec-activites {
+  background-color: #212428;
+  height: 2500px;
+  position: relative;
 }
 
 /* Title Style Start */
@@ -34,7 +35,6 @@
 
 .title-div > h1:nth-child(2) {
   z-index: 1;
-  content: "ABOUT ME";
   right: 0;
   left: 0;
   margin-top: 70px;
@@ -49,3 +49,149 @@
 }
 
 /* Title Style End */
+
+.flex {
+  /* background-color: #fec51c; */
+  /* display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; */
+
+  position: relative;
+  left: 20px;
+  right: 0;
+  margin-top: 0px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  width: 1800px;
+}
+
+.portfolio_card {
+  width: 400px;
+  height: 600px;
+  background: #212428;
+  box-shadow: 0px 4px 10px 10px rgba(196, 207, 222, 0.05);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  margin-right: 45px;
+}
+
+.portfolio_img {
+  border-radius: 20px 20px 0px 0px;
+  width: 400px;
+  height: 400px;
+}
+
+#port_img1 {
+  background: url(../img/activities/A1.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img2 {
+  background: url(../img/activities/A2.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img3 {
+  background: url(../img/activities/A3.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img4 {
+  background: url(../img/activities/A4.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img5 {
+  background: url(../img/activities/A5.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img6 {
+  background: url(../img/activities/A6.gif);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-position-x: -1px;
+}
+
+#port_img7 {
+  background: url(../img/activities/A7.gif);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img8 {
+  background: url(../img/activities/A8.gif);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img9 {
+  background: url(../img/activities/A9.gif);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img10 {
+  background: url(../img/activities/A10.gif);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+#port_img11 {
+    background: url(../img/activities/A11.gif);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+
+.portfolio_card > span {
+  position: relative;
+  top: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 20px;
+  color: #fec51c;
+}
+
+.portfolio_card > span > i {
+  font-size: 15px;
+  font-weight: 700;
+  color: #e5e5e5;
+  transform: scaleX(-1);
+  margin-right: 7px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#port_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 137px;
+  font-size: 25px;
+  font-weight: 700;
+  word-wrap: break-word;
+  text-align: center;
+  color: #e5e5e5;
+  margin: 20px;
+}
