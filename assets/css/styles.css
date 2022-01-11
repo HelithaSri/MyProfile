@@ -1375,15 +1375,14 @@ textarea {
   main > section:nth-child(1) > div {
     display: flex;
     height: 433px;
-    background-color: #d62e2e;
-    justify-content: space-evenly;
-    align-content: space-between;
-    align-items: stretch;
+    /* background-color: #d62e2e; */
+    justify-content: flex-end;
+    align-content: space-around;
+    align-items: center;
     width: 320px;
     left: 0px;
     right: 0px;
     margin: auto;
-    margin-right: 0px;
     flex-direction: column;
     flex-wrap: nowrap;
   }
@@ -1573,7 +1572,7 @@ textarea {
   /* time line start */
 
   #sec-edu {
-    height: 1168px;
+    height: 1161px;
   }
 
   #time-flex-div {
@@ -1619,34 +1618,33 @@ textarea {
     height: 1985px;
   }
 
-  #grid-div{
+  #grid-div {
     /* transform: scale(0.2); */
-    transform: scale(0.5);
-    top: -1007px;
+    transform: scale(0.46);
+    top: -1154px;
     /* margin-top: -1088px; */
-    left: -517px;
+    left: -171px;
     right: 0;
     /* margin: auto; */
-    width: 1355px;
+    width: 665px;
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     grid-template-columns: 1fr;
     position: relative;
-
   }
 
-  #sec-portflio{
-    height: 2201px;
+  #sec-portflio {
+    height: 1970px;
   }
 
   /* Activities */
   #sec-activity {
-    height: 2015px;
+    height: 1809px;
   }
 
   #activity_container {
     /* background-color: red; */
     position: relative;
-    top: -85px;
+    top: -184px;
     right: 0;
     bottom: 0;
     left: -610px;
@@ -1657,10 +1655,75 @@ textarea {
     align-items: center;
     justify-content: space-between;
     /* width: 1550px; */
-    transform: scale(0.9);
+    transform: scale(0.8);
     flex-direction: column;
-}
+    width: 333px;
+    left: 0;
+  }
 
+  .activity_card_div:hover {
+    transform: scale(1.0);
+  }
 
+  #sec-contact {
+    height: 861px;
+    
+  }
 
+  .wrap {
+    flex-direction: column;
+    transform: scale(0.8);
+    left: -40px;
+    /* left: 0;
+    right: 0; */
+    /* margin: auto; */
+    width: 317px;
+    width: 320px;
+    /* display: none; */
+    top: -177px;
+
+  }
+
+  #digital_div{
+    transform: scale(0.5);
+    left: -166px;
+    margin-right: -345px;
+  }
+
+  #bottom{
+    transform: scale(0.5);
+    left: -166px;
+    top: -155px;
+  }
+
+  #contact_left_cont_div {
+    display: inline;
+    height: 469px;
+    width: 408px;
+  }
+
+  #contact_right_cont_div {
+    position: relative;
+    transform: scale(0.5);
+    left: -166px;
+    top: -183px;
+    margin-right: -180px;
+  }
+
+  #sec-contact > hr {
+    width: 277px;
+    display: none;
+  }
+
+  #top {
+    display: none;
+  }
+
+  .footer-wrap{
+    transform: scale(0.6);
+  }
+
+  #footer_p {
+    width: 485px;
+  }
 }
