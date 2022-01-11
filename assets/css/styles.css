@@ -1360,10 +1360,27 @@ textarea {
   color: #ffffff;
 }
 
+@media all and (max-width: 768px){
+
+}
+
+
 @media all and (min-width: 320px) and (max-width: 425px) {
-  body > header {
-    display: none;
+
+
+
+  body > header > nav {
+    font-size: 17px;
+    line-height: 2;
   }
+
+  header > nav > ul {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 33px;
+    margin-right: 31px;
+  }
+
 
   /* Header Start */
 
@@ -1750,10 +1767,7 @@ textarea {
   }
 
   @media all and (max-width: 320px) {
-    body > header {
-      display: none;
-    }
-
+    
     /* Header Start */
 
     main > section:nth-child(1) {
