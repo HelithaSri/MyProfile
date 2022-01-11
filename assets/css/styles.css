@@ -1727,6 +1727,28 @@ textarea {
     width: 485px;
   }
 
+  @media all and (max-width: 425px){
+    #grid-div {
+      left: -120px;
+    }
+
+    #time-flex-div {
+      left: -95px;
+    }
+
+  }
+
+  @media all and (max-width: 375px){
+    #grid-div {
+      left: -146px;
+    }
+
+    #time-flex-div {
+      left: -116px;
+    }
+
+  }
+
   @media all and (max-width: 320px) {
     body > header {
       display: none;
@@ -2095,7 +2117,5 @@ textarea {
     }
   }
 
-  @media all and (max-width: 425px){
-
-  }
+  
 }
