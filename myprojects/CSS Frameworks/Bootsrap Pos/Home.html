@@ -1,0 +1,116 @@
+<!--
+@author : HelithaSri
+@email : helitha.pravin@gmail.com
+@create date : 2022-01-19  18:00
+@modify date : 2022-01-19  18:02
+@desc [simple POS system UI - CSS Frameworks]
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <title>POS System - Home</title>
+</head>
+
+<body
+    style="background-image: url(assets/img/1.svg); background-repeat: no-repeat; background-size: 30%; background-position-x: left; background-position-y: 145%;">
+    <header>
+        <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #03060c">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Home.html">
+                    <img src="assets/img/logo.png" alt="PosLab Logo" width="184.3125" height="48.1875" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="order.html">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Customer.html">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Item.html">Items</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active">2021-01-20</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">|</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-danger" href="index.html" role="button">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- NavBar End -->
+    </header>
+    <main>
+        <section class="container d-flex flex-column justify-content-center align-items-stretch" style="height: 46rem;">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="order.html" class="nav-link p-0 text-white">
+                        <div class="modal-dialog shadow-lg">
+                            <div class="modal-content justify-content-center align-items-center"
+                                style="height: 10rem; background-color: #1abc9c">
+                                <h3 class="modal-title fw-bold">ORDER</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="Item.html" class="nav-link p-0 text-white">
+                        <div class="modal-dialog shadow-lg">
+                            <div class="modal-content justify-content-center align-items-center"
+                                style="height: 10rem; background-color: #9b59b6">
+                                <h3 class="modal-title fw-bold">ITEM</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="Customer.html" class="nav-link p-0 text-white">
+                        <div class="modal-dialog shadow-lg">
+                            <div class="modal-content justify-content-center align-items-center"
+                                style="height: 10rem; background-color: #f1c40f">
+                                <h3 class="modal-title fw-bold">CUSTOMER</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <a href="#" class="nav-link p-0 text-white">
+                        <div class="modal-dialog shadow-lg">
+                            <div class="modal-content justify-content-center align-items-center"
+                                style="height: 10rem; background-color: #e67e22">
+                                <h3 class="modal-title fw-bold">USER</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
