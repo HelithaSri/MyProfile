@@ -172,6 +172,13 @@
   background-repeat: no-repeat;
 }
 
+#port_img12 {
+  background: url(../img/activities/A12\ pos\ ui.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
 .portfolio_card > span {
   position: relative;
   top: 20px;
