@@ -1371,9 +1371,10 @@ textarea {
 #pic {
   width: 150px;
   height: 150px;
-  border: 5px solid #fec51c;
-  border-radius: 100%;
-  background-image: url(../img/Dp.png);
+  /* border: 5px solid #fec51c; */
+  /* border-radius: 100%; */
+  /* background-image: url(../img/Dp.png); */
+  background-image: url(../img/DP2.png);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
