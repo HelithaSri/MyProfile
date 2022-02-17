@@ -1,0 +1,40 @@
+.title-div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    position: absolute;
+    color: rgb(255, 255, 255);
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(29, 29, 36);
+}
+
+.box{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: red;
+    margin: 30px;
+}
+
+.start-div{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.center-div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.end-div{
+    display: flex;
+    justify-content: flex-end;
+}
