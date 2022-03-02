@@ -336,20 +336,19 @@
                 <h1 class="text-center mb-3">
                     <i class="bi bi-box-seam m-2"></i>ITEM
                 </h1>
-
+            
                 <div class="row g-3 align-items-center pb-3 justify-content-between">
                     <div class="col-12 col-md-6 col-xl-5">
                         <div class="input-group mb-3" style="height: 10px">
-                            <input type="text" class="form-control" placeholder="Search Item"
-                                aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <input type="text" class="form-control" placeholder="Search Item" aria-label="Recipient's username"
+                                aria-describedby="button-addon2" />
                             <button class="btn btn-success" type="button" id="button-addon2">
                                 <i class="bi bi-search m-2"></i>Search
                             </button>
                         </div>
                     </div>
                     <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-                        <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal"
-                            data-bs-target="#addItem">
+                        <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#addItem">
                             <i class="bi bi-bag-plus m-2"></i>Add Item
                         </button>
                         <button type="button" class="btn btn-danger mt-2">
@@ -439,52 +438,108 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="cutomer" class="container">
-            <!-- Add Customer Model Start -->
-            <div class="modal fade" id="addCustomer" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-                tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header bg-success text-white">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">
-                                <i class="bi bi-person-plus-fill m-2"></i>Add Customer
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="cusId" class="form-label">Customer ID</label>
-                                    <input type="text" class="form-control" id="cusId" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="cusName" class="form-label">Customer Name</label>
-                                    <input type="text" class="form-control" id="cusName" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="cusAddress" class="form-label">Customer Address</label>
-                                    <input type="text" class="form-control" id="cusAddress" />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="cusSalary" class="form-label">Customer Salary</label>
-                                    <input type="text" class="form-control" id="cusSalary" />
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
-                                Cancle
-                            </button>
-                            <button type="button" class="btn btn-primary mt-2">
-                                Add Customer
-                            </button>
+            </section>
+            
+            <section id="cutomer" class="container">
+                <!-- Add Customer Model Start -->
+                <div class="modal fade" id="addCustomer" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success text-white">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">
+                                    <i class="bi bi-person-plus-fill m-2"></i>Add Customer
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="cusIdAdd" class="form-label">Customer ID</label>
+                                        <input type="text" class="form-control" id="cusIdAdd" />
+                                        <small id="error1">* Customer ID is a required field, Pattern C00-001</small>
+                                        <!-- <small id="error1"></small> -->
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cusNameAdd" class="form-label">Customer Name</label>
+                                        <input type="text" class="form-control" id="cusNameAdd" />
+                                        <small id="error2">* Customer Name is required field, Min 5 & Max 10</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cusAddressAdd" class="form-label">Customer Address</label>
+                                        <input type="text" class="form-control" id="cusAddressAdd" />
+                                        <small id="error3">* Customer Address is required field, Min 5</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cusSalaryAdd" class="form-label">Customer Salary</label>
+                                        <input type="text" class="form-control" id="cusSalaryAdd" />
+                                        <small id="error4">* Customer Address is required field, Ex:500.00</small>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
+                                    Cancle
+                                </button>
+                                <button id="btnAddCus" type="button" class="btn btn-primary mt-2">
+                                    Add Customer
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Add Customer Model End -->
+                <!-- Add Customer Model End -->
+            
+                <!-- Update Customer Model Start -->
+                <div class="modal fade" id="updateCustomer" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success text-white">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">
+                                    <i class="bi bi-person-plus-fill m-2"></i>Update Customer
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="cusIdUpdate" class="form-label">Customer ID</label>
+                                        <input type="text" class="form-control" id="cusIdUpdate" />
+                                        <small id="error01">* Customer ID is a required field, Pattern C00-001</small>
+            
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cusNameUpdate" class="form-label">Customer Name</label>
+                                        <input type="text" class="form-control" id="cusNameUpdate" />
+                                        <small id="error02">* Customer Name is required field, Min 5 & Max 10</small>
+            
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cusAddressUpdate" class="form-label">Customer Address</label>
+                                        <input type="text" class="form-control" id="cusAddressUpdate" />
+                                        <small id="error03">* Customer Address is required field, Min 5</small>
+            
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cusSalaryUpdate" class="form-label">Customer Salary</label>
+                                        <input type="text" class="form-control" id="cusSalaryUpdate" />
+                                        <small id="error04">* Customer Address is required field, Ex:500.00</small>
+            
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
+                                    Cancle
+                                </button>
+                                <button id="btnUpdateCus" type="button" class="btn btn-primary mt-2">
+                                    Update Customer
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Update Customer Model End -->
 
             <div class="rounded-3 p-3" style="background-color: #dde4f0; margin-top: 30px">
                 <h1 class="text-center mb-3">
@@ -525,8 +580,8 @@
                                         <th class="text-center" style="width: 15%">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody id="cusTblBody">
+                                    <!-- <tr>
                                         <th scope="row">C001</th>
                                         <td>Sri</td>
                                         <td>Kandy</td>
@@ -567,7 +622,7 @@
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -599,7 +654,12 @@
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="db\DB.js"></script>
+    <script src="model/CustomerDTO.js"></script>
+    <script src="controller/CustomerController.js"></script>
     <script src="assets/js/script.js"></script>
+    
 </body>
 
 </html>
