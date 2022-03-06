@@ -29,8 +29,9 @@ validation(RegExCusName, '#cusNameUpdate', '#error02', '#cusAddressUpdate', '#bt
 validation(RegExCusAddress, '#cusAddressUpdate', '#error03', '#cusSalaryUpdate', '#btnUpdateCus');
 validation(RegExCusSalary, '#cusSalaryUpdate', '#error04', '#btnUpdateCus', '#btnUpdateCus');
 
-//Add New Customer - Start
-addCustomer();
+
+addCustomer(); //Add New Customer
+loadAllCustomers(); //load all customers
 
 
 /* Functions Call Section - End */
@@ -80,34 +81,52 @@ function addCustomer() {
         */ 
         
         customerDB.push(customerObj);
-        loadAllCustomers();
+        loadAllCustomers(); //load all customers
         // Clear input Fields
         $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");
-
-    });
-    
+        bindCustomerRow(); //bind the events to the table rows after the row was added
+    });    
 }
 // Customer Add Function - End
 
+// Load All Customers Function - Start
 function loadAllCustomers() {
     $("#cusTblBody").empty(); //Duplicate Old rows remove
     let btns =
-          "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
+        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
     for (let i = 0; i < customerDB.length; i++) {
         let nRow =
-          "<tr><td>" +
-          customerDB[i].__id +
-          "</td><td>" +
-          customerDB[i].__name +
-          "</td><td>" +
-          customerDB[i].__address +
-          "</td><td>" +
-          customerDB[i].__salary +
-          "</td><td class='text-center'>" +
-          btns +
-          "</td></tr>";
-            console.log("s");
+            "<tr><td>" +
+            customerDB[i].__id +
+            "</td><td>" +
+            customerDB[i].__name +
+            "</td><td>" +
+            customerDB[i].__address +
+            "</td><td>" +
+            customerDB[i].__salary +
+            "</td><td class='text-center'>" +
+            btns +
+            "</td></tr>";
+        console.log("s");
         $("#cusTblBody").append(nRow);
     }
 }
+// Load All Customers Function - End
+
+// Bind Events Customer Row Function - Start
+function bindCustomerRow() {
+    $("#cusTblBody>tr").click(function () {
+
+        let custId = $(this).children(":eq(0)").text();
+        let custName = $(this).children(":eq(1)").text();
+        let custAddress = $(this).children(":eq(2)").text();
+        let custSalary = $(this).children(":eq(3)").text();
+
+        $("#cusIdUpdate").val(custId);
+        $("#cusNameUpdate").val(custName);
+        $("#cusAddressUpdate").val(custAddress);
+        $("#cusSalaryUpdate").val(custSalary);
+    });
+}
+// Bind Events Customer Row - End
