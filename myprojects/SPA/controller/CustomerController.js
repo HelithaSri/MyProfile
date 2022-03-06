@@ -59,35 +59,55 @@ function validation(regEx, id, error, nextId, btn) {
 
 // Customer Add Function - Start
 function addCustomer() {
-    var customerObj = new CustomerObject();
+    // var customerObj = new CustomerObject();
     $("#btnAddCus").click(function () {
 
         let custId = $("#cusIdAdd").val();
         let custName = $("#cusNameAdd").val();
         let custAddress = $("#cusAddressAdd").val();
         let custSalary = $("#cusSalaryAdd").val();
-
-        let btns =
+        
+        var customerObj={
+            __id:custId,
+            __name:custName,
+            __address:custAddress,
+            __salary:custSalary
+        }
+        /* let btns =
             "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
         customerObj.setCustomer(custId, custName, custAddress, custSalary, btns);
+        */ 
+        
         customerDB.push(customerObj);
-        console.log(customerDB);
-
+        loadAllCustomers();
         // Clear input Fields
         $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");
 
-        loadAllCustomers();
     });
     
 }
 // Customer Add Function - End
 
 function loadAllCustomers() {
+    $("#cusTblBody").empty(); //Duplicate Old rows remove
+    let btns =
+          "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
+
     for (let i = 0; i < customerDB.length; i++) {
-        console.log("hi");
-        console.log(customerDB[i]);
-        console.log("h23");
-        console.log(customerDB[i].__cID);
+        let nRow =
+          "<tr><td>" +
+          customerDB[i].__id +
+          "</td><td>" +
+          customerDB[i].__name +
+          "</td><td>" +
+          customerDB[i].__address +
+          "</td><td>" +
+          customerDB[i].__salary +
+          "</td><td class='text-center'>" +
+          btns +
+          "</td></tr>";
+            console.log("s");
+        $("#cusTblBody").append(nRow);
     }
 }
