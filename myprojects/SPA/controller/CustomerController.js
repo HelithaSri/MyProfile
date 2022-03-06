@@ -130,3 +130,38 @@ function bindCustomerRow() {
     });
 }
 // Bind Events Customer Row - End
+
+$("#button-cus-search").click(function(){
+    let btns =
+        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
+
+    var searchId=$("#txt-cus-search").val();
+    var response = searchCustomer(searchId);
+    if (response) {
+        $("#cusTblBody").empty();
+        let nRow =
+            "<tr><td>" +
+            response.__id +
+            "</td><td>" +
+            response.__name +
+            "</td><td>" +
+            response.__address +
+            "</td><td>" +
+            response.__salary +
+            "</td><td class='text-center'>" +
+            btns +
+            "</td></tr>";
+            $("#cusTblBody").append(nRow);
+    }else{
+        alert("No Such a customer");
+
+    }
+});
+
+function searchCustomer(id) {
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].__id==id) {
+            return customerDB[i];
+        }
+    }
+}
