@@ -32,7 +32,7 @@ validation(RegExCusSalary, '#cusSalaryUpdate', '#error04', '#btnUpdateCus', '#bt
 
 addCustomer(); //Add New Customer
 loadAllCustomers(); //load all customers
-
+clearSearch(); //Clear Search and Refresh table
 
 /* Functions Call Section - End */
 
@@ -152,9 +152,11 @@ $("#button-cus-search").click(function(){
             btns +
             "</td></tr>";
             $("#cusTblBody").append(nRow);
+            bindCustomerRow();
     }else{
         alert("No Such a customer");
-
+        clearSearch(); //Clear Search and Refresh table
+        
     }
 });
 
@@ -164,4 +166,11 @@ function searchCustomer(id) {
             return customerDB[i];
         }
     }
+}
+
+function clearSearch() {
+    $("#clear-btn-cus").click(function(){
+        loadAllCustomers(); //load all customers
+        $("#txt-cus-search").val("");
+    });
 }
