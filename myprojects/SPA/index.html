@@ -384,9 +384,9 @@
                 <div class="row g-3 align-items-center pb-3 justify-content-between">
                     <div class="col-12 col-md-6 col-xl-5">
                         <div class="input-group mb-3" style="height: 10px">
-                            <input type="text" class="form-control" placeholder="Search Item" aria-label="Recipient's username"
-                                aria-describedby="button-addon2" />
-                            <button class="btn btn-success" type="button" id="button-addon2">
+                            <input id="txt-item-search" type="text" class="form-control" placeholder="Search Item" aria-label="Recipient's username"
+                                aria-describedby="btn-item-search" />
+                            <button class="btn btn-success" type="button" id="btn-item-search">
                                 <i class="bi bi-search m-2"></i>Search
                             </button>
                         </div>
@@ -395,7 +395,7 @@
                         <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#addItem">
                             <i class="bi bi-bag-plus m-2"></i>Add Item
                         </button>
-                        <button type="button" class="btn btn-danger mt-2">
+                        <button id="clear-btn-item" type="button" class="btn btn-danger mt-2">
                             <i class="bi bi-backspace m-2"></i>Clear
                         </button>
                     </div>
@@ -415,7 +415,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="itemTblBody">
-                                    <tr>
+                                    <!-- <tr>
                                         <th scope="row">I001</th>
                                         <td>Mouse</td>
                                         <td>2000</td>
@@ -456,7 +456,7 @@
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
