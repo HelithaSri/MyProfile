@@ -67,6 +67,8 @@ function addCustomer() {
         let custName = $("#cusNameAdd").val();
         let custAddress = $("#cusAddressAdd").val();
         let custSalary = $("#cusSalaryAdd").val();
+        let btns =
+        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
         /* var customerObj = {
             __id: custId,
@@ -75,13 +77,14 @@ function addCustomer() {
             __salary: custSalary
         } */
 
-        var customerObj = new CustomerDTO(custId,custName,custAddress,custSalary);
+        var customerObj = new CustomerDTO(custId,custName,custAddress,custSalary,btns);
 
         /* let btns =
             "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
         customerObj.setCustomer(custId, custName, custAddress, custSalary, btns);
         */
+
         customerDB.push(customerObj);
         loadAllCustomers(); //load all customers
         $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields
@@ -93,21 +96,21 @@ function addCustomer() {
 // Load All Customers Function - Start
 function loadAllCustomers() {
     $("#cusTblBody").empty(); //Duplicate Old rows remove
-    let btns =
+    /* let btns =
         "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
-
+ */
     for (let i = 0; i < customerDB.length; i++) {
         let nRow =
             "<tr><td>" +
-            customerDB[i].__id +
+            customerDB[i].getCustomerID() +
             "</td><td>" +
-            customerDB[i].__name +
+            customerDB[i].getCustomerName() +
             "</td><td>" +
-            customerDB[i].__address +
+            customerDB[i].getCustomerAddress() +
             "</td><td>" +
-            customerDB[i].__salary +
+            customerDB[i].getCustomerSalary() +
             "</td><td class='text-center'>" +
-            btns +
+            customerDB[i].getCustomerbtn() +
             "</td></tr>";
         console.log("s");
         $("#cusTblBody").append(nRow);
@@ -133,24 +136,24 @@ function bindCustomerRow() {
 // Bind Events Customer Row - End
 
 $("#button-cus-search").click(function () {
-    let btns =
+    /* let btns =
         "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
-
+ */
     var searchId = $("#txt-cus-search").val();
     var response = searchCustomer(searchId);
     if (response) {
         $("#cusTblBody").empty();
         let nRow =
             "<tr><td>" +
-            response.__id +
+            response.getCustomerID() +
             "</td><td>" +
-            response.__name +
+            response.getCustomerName() +
             "</td><td>" +
-            response.__address +
+            response.getCustomerAddress() +
             "</td><td>" +
-            response.__salary +
+            response.getCustomerSalary() +
             "</td><td class='text-center'>" +
-            btns +
+            response.getCustomerbtn() +
             "</td></tr>";
         $("#cusTblBody").append(nRow);
         bindCustomerRow();
@@ -163,7 +166,7 @@ $("#button-cus-search").click(function () {
 
 function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].__id == id) {
+        if (customerDB[i].getCustomerID() == id) {
             return customerDB[i];
         }
     }
