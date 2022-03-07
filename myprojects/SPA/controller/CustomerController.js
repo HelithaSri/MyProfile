@@ -82,7 +82,6 @@ function addCustomer() {
 
         customerObj.setCustomer(custId, custName, custAddress, custSalary, btns);
         */
-
         customerDB.push(customerObj);
         loadAllCustomers(); //load all customers
         $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields
