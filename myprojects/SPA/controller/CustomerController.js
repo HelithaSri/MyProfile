@@ -68,12 +68,15 @@ function addCustomer() {
         let custAddress = $("#cusAddressAdd").val();
         let custSalary = $("#cusSalaryAdd").val();
 
-        var customerObj = {
+        /* var customerObj = {
             __id: custId,
             __name: custName,
             __address: custAddress,
             __salary: custSalary
-        }
+        } */
+
+        var customerObj = new CustomerDTO(custId,custName,custAddress,custSalary);
+
         /* let btns =
             "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
@@ -82,8 +85,7 @@ function addCustomer() {
 
         customerDB.push(customerObj);
         loadAllCustomers(); //load all customers
-        // Clear input Fields
-        $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");
+        $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields
         bindCustomerRow(); //bind the events to the table rows after the row was added
     });
 }
