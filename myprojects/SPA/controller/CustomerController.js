@@ -12,7 +12,7 @@ $('#error03').css({ "display": "none" });
 $('#error04').css({ "display": "none" });
 
 var regExCusID = /^(C00-)[0-9]{3,4}$/;
-var RegExCusName =/^[A-z ]{5,20}$/;
+var RegExCusName = /^[A-z ]{5,20}$/;
 var RegExCusAddress = /^[0-9/A-z. ,]{7,}$/;
 var RegExCusSalary = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
@@ -41,19 +41,19 @@ clearSearch(); //Clear Search and Refresh table
 // Customer Validation Function - Start
 function validation(regEx, id, error, nextId, btn) {
     $(id).keyup(function (event) {
-      let input = $(id).val();
-      if (regEx.test(input)) {
-        $(id).css({ 'border': '2px solid green', 'background-color': '#fff' });
-        $(error).css({"display":"none"});
-        if (event.key == "Enter") {
-            $(btn).prop('disabled', false);
-            $(nextId).focus();
+        let input = $(id).val();
+        if (regEx.test(input)) {
+            $(id).css({ 'border': '2px solid green', 'background-color': '#fff' });
+            $(error).css({ "display": "none" });
+            if (event.key == "Enter") {
+                $(btn).prop('disabled', false);
+                $(nextId).focus();
+            }
+        } else {
+            $(id).css({ 'border': '2px solid red', 'background-color': '#ffe6e6' });
+            $(error).css({ "color": "red", "display": "block" });
+            $(btn).prop('disabled', true);
         }
-      } else {
-        $(id).css({ 'border': '2px solid red', 'background-color': '#ffe6e6' });
-        $(error).css({"color":"red","display":"block"});
-        $(btn).prop('disabled', true);
-      }
     });
 }
 // Customer Validation Function - End
@@ -67,25 +67,25 @@ function addCustomer() {
         let custName = $("#cusNameAdd").val();
         let custAddress = $("#cusAddressAdd").val();
         let custSalary = $("#cusSalaryAdd").val();
-        
-        var customerObj={
-            __id:custId,
-            __name:custName,
-            __address:custAddress,
-            __salary:custSalary
+
+        var customerObj = {
+            __id: custId,
+            __name: custName,
+            __address: custAddress,
+            __salary: custSalary
         }
         /* let btns =
             "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
         customerObj.setCustomer(custId, custName, custAddress, custSalary, btns);
-        */ 
-        
+        */
+
         customerDB.push(customerObj);
         loadAllCustomers(); //load all customers
         // Clear input Fields
         $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");
         bindCustomerRow(); //bind the events to the table rows after the row was added
-    });    
+    });
 }
 // Customer Add Function - End
 
@@ -93,7 +93,7 @@ function addCustomer() {
 function loadAllCustomers() {
     $("#cusTblBody").empty(); //Duplicate Old rows remove
     let btns =
-        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
+        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
     for (let i = 0; i < customerDB.length; i++) {
         let nRow =
@@ -131,11 +131,11 @@ function bindCustomerRow() {
 }
 // Bind Events Customer Row - End
 
-$("#button-cus-search").click(function(){
+$("#button-cus-search").click(function () {
     let btns =
-        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
+        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
 
-    var searchId=$("#txt-cus-search").val();
+    var searchId = $("#txt-cus-search").val();
     var response = searchCustomer(searchId);
     if (response) {
         $("#cusTblBody").empty();
@@ -151,26 +151,28 @@ $("#button-cus-search").click(function(){
             "</td><td class='text-center'>" +
             btns +
             "</td></tr>";
-            $("#cusTblBody").append(nRow);
-            bindCustomerRow();
-    }else{
+        $("#cusTblBody").append(nRow);
+        bindCustomerRow();
+    } else {
         alert("No Such a customer");
         clearSearch(); //Clear Search and Refresh table
-        
+
     }
 });
 
 function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].__id==id) {
+        if (customerDB[i].__id == id) {
             return customerDB[i];
         }
     }
 }
 
+//clear search function - start
 function clearSearch() {
-    $("#clear-btn-cus").click(function(){
+    $("#clear-btn-cus").click(function () {
         loadAllCustomers(); //load all customers
         $("#txt-cus-search").val("");
     });
 }
+//clear search function - End
