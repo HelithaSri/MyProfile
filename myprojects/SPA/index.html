@@ -175,8 +175,8 @@
                                         </select>
                                     </div>
                                     <div class="col">
-                                        <label for="itemName" class="form-label fw-bold">Item Name:</label>
-                                        <input type="text" class="form-control" id="itemName" placeholder="Mouse" />
+                                        <label for="itemNameO" class="form-label fw-bold">Item Name:</label>
+                                        <input type="text" class="form-control" id="itemNameO" placeholder="Mouse" />
                                     </div>
                                 </div>
                                 <div class="row mt-3">
@@ -323,7 +323,7 @@
                             <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
                                 Cancle
                             </button>
-                            <button type="button" class="btn btn-primary mt-2">
+                            <button  id="btnAddItem" type="button" class="btn btn-primary mt-2">
                                 Add Item
                             </button>
                         </div>
@@ -331,6 +331,50 @@
                 </div>
             </div>
             <!-- Add Item Model End -->
+
+            <!-- Update Item Model Start -->
+            <div class="modal fade" id="addItem" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">
+                                <i class="bi bi-bag-plus m-2"></i>Add Item
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="itemCode" class="form-label">Item Code</label>
+                                    <input type="text" class="form-control" id="itemCode" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="itemName" class="form-label">Item Name</label>
+                                    <input type="text" class="form-control" id="itemName" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="itemQty" class="form-label">Item Qty</label>
+                                    <input type="text" class="form-control" id="itemQty" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="itemPrice" class="form-label">Item Price</label>
+                                    <input type="text" class="form-control" id="itemPrice" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
+                                Cancle
+                            </button>
+                            <button  id="btnAddItem" type="button" class="btn btn-primary mt-2">
+                                Add Item
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Update Item Model End -->
 
             <div class="rounded-3 p-3" style="background-color: #dde4f0; margin-top: 30px">
                 <h1 class="text-center mb-3">
@@ -370,7 +414,7 @@
                                         <th class="text-center" style="width: 15%">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="itemTblBody">
                                     <tr>
                                         <th scope="row">I001</th>
                                         <td>Mouse</td>
@@ -658,6 +702,7 @@
     <script src="db\DB.js"></script>
     <script src="model/CustomerDTO.js"></script>
     <script src="controller/CustomerController.js"></script>
+    <script src="controller/ItemController.js"></script>
     <script src="assets/js/script.js"></script>
     
 </body>
