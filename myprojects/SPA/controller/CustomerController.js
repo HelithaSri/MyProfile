@@ -1,5 +1,5 @@
 $("#btnAddCus").prop('disabled', true);
-
+var clickedRowCId;
 /* Validation - Start */
 $('#error1').css({ "display": "none" });
 $('#error2').css({ "display": "none" });
@@ -33,6 +33,7 @@ validation(RegExCusSalary, '#cusSalaryUpdate', '#error04', '#btnUpdateCus', '#bt
 addCustomer(); //Add New Customer
 loadAllCustomers(); //load all customers
 clearSearch(); //Clear Search and Refresh table
+// deleteCustomer();
 
 /* Functions Call Section - End */
 
@@ -68,7 +69,7 @@ function addCustomer() {
         let custAddress = $("#cusAddressAdd").val();
         let custSalary = $("#cusSalaryAdd").val();
         let btns =
-        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
+        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger cus-delete'><i class='bi bi-trash'></i></button>";
 
         /* var customerObj = {
             __id: custId,
@@ -78,17 +79,11 @@ function addCustomer() {
         } */
 
         var customerObj = new CustomerDTO(custId,custName,custAddress,custSalary,btns);
-
-        /* let btns =
-            "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger'><i class='bi bi-trash'></i></button>";
-
-        customerObj.setCustomer(custId, custName, custAddress, custSalary, btns);
-        */
-
         customerDB.push(customerObj);
         loadAllCustomers(); //load all customers
         $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields
-        bindCustomerRow(); //bind the events to the table rows after the row was added
+        //bindCustomerRow(); //bind the events to the table rows after the row was added
+        
     });
 }
 // Customer Add Function - End
@@ -96,9 +91,6 @@ function addCustomer() {
 // Load All Customers Function - Start
 function loadAllCustomers() {
     $("#cusTblBody").empty(); //Duplicate Old rows remove
-    /* let btns =
-        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
- */
     for (let i = 0; i < customerDB.length; i++) {
         let nRow =
             "<tr><td>" +
@@ -114,6 +106,8 @@ function loadAllCustomers() {
             "</td></tr>";
         console.log("s");
         $("#cusTblBody").append(nRow);
+        bindCustomerRow();
+        deleteCustomer();
     }
 }
 // Load All Customers Function - End
@@ -122,12 +116,12 @@ function loadAllCustomers() {
 function bindCustomerRow() {
     $("#cusTblBody>tr").click(function () {
 
-        let custId = $(this).children(":eq(0)").text();
+        clickedRowCId = $(this).children(":eq(0)").text();
         let custName = $(this).children(":eq(1)").text();
         let custAddress = $(this).children(":eq(2)").text();
         let custSalary = $(this).children(":eq(3)").text();
 
-        $("#cusIdUpdate").val(custId);
+        $("#cusIdUpdate").val(clickedRowCId);
         $("#cusNameUpdate").val(custName);
         $("#cusAddressUpdate").val(custAddress);
         $("#cusSalaryUpdate").val(custSalary);
@@ -180,3 +174,36 @@ function clearSearch() {
     });
 }
 //clear search function - End
+
+function deleteCustomer() {
+    $(".cus-delete").click(function () {
+        
+        for (let i = 0; i < customerDB.length; i++) {
+
+            // console.log(customerDB[i].getCustomerID());
+            if (customerDB[i].getCustomerID() == clickedRowCId) {
+                customerDB.splice(i, 1);
+            }
+        }
+        loadAllCustomers();
+        console.log("daf57");
+    });
+}
+
+
+$("#btnUpdateCus").click(function () {
+    let custId = $("#cusIdUpdate").val();
+    let custName = $("#cusNameUpdate").val();
+    let custAddress = $("#cusAddressUpdate").val();
+    let custSalary = $("#cusSalaryUpdate").val();
+
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].getCustomerID() == custId) {
+            customerDB[i].setCustomerName(custName);
+            customerDB[i].setCustomerAddress(custAddress);
+            customerDB[i].setCustomerSalary(custSalary);
+        }
+    }
+    loadAllCustomers();
+    //bindCustomerRow();
+});
