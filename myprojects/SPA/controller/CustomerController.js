@@ -186,7 +186,7 @@ function deleteCustomer() {
             }
         }
         loadAllCustomers();
-        console.log("daf57");
+        // console.log("daf57");
     });
 }
 
