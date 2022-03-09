@@ -11,7 +11,7 @@ $('#error02').css({ "display": "none" });
 $('#error03').css({ "display": "none" });
 $('#error04').css({ "display": "none" });
 
-var regExCusID = /^(C00-)[0-9]{3,4}$/;
+// var regExCusID = /^(C00-)[0-9]{3,4}$/;
 var RegExCusName = /^[A-z ]{5,20}$/;
 var RegExCusAddress = /^[0-9/A-z. ,]{7,}$/;
 var RegExCusSalary = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
@@ -19,20 +19,21 @@ var RegExCusSalary = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 /* Functions Call Section - Start */
 
 // Customer Validation Function Call - Start
-validation(regExCusID, '#cusIdAdd', '#error1', '#cusNameAdd', '#btnAddCus');
+// validation(regExCusID, '#cusIdAdd', '#error1', '#cusNameAdd', '#btnAddCus');
 validation(RegExCusName, '#cusNameAdd', '#error2', '#cusAddressAdd', '#btnAddCus');
 validation(RegExCusAddress, '#cusAddressAdd', '#error3', '#cusSalaryAdd', '#btnAddCus');
 validation(RegExCusSalary, '#cusSalaryAdd', '#error4', "#btnAddCus", '#btnAddCus');
 
-validation(regExCusID, '#cusIdUpdate', '#error01', "#cusNameUpdate", '#btnUpdateCus');
+// validation(regExCusID, '#cusIdUpdate', '#error01', "#cusNameUpdate", '#btnUpdateCus');
 validation(RegExCusName, '#cusNameUpdate', '#error02', '#cusAddressUpdate', '#btnUpdateCus');
 validation(RegExCusAddress, '#cusAddressUpdate', '#error03', '#cusSalaryUpdate', '#btnUpdateCus');
 validation(RegExCusSalary, '#cusSalaryUpdate', '#error04', '#btnUpdateCus', '#btnUpdateCus');
 
-
+generateId();   //Generate New Customer ID
 addCustomer(); //Add New Customer
 loadAllCustomers(); //load all customers
 clearSearch(); //Clear Search and Refresh table
+disableEdit();  //Prevent Editing Customer ID
 // deleteCustomer();
 
 /* Functions Call Section - End */
@@ -83,7 +84,7 @@ function addCustomer() {
         loadAllCustomers(); //load all customers
         $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields
         //bindCustomerRow(); //bind the events to the table rows after the row was added
-        
+        generateId()
     });
 }
 // Customer Add Function - End
@@ -151,6 +152,7 @@ $("#button-cus-search").click(function () {
             "</td></tr>";
         $("#cusTblBody").append(nRow);
         bindCustomerRow();
+        deleteCustomer();
     } else {
         alert("No Such a customer");
         clearSearch(); //Clear Search and Refresh table
@@ -207,3 +209,29 @@ $("#btnUpdateCus").click(function () {
     loadAllCustomers();
     //bindCustomerRow();
 });
+
+function generateId() {
+    // console.log((customerDB.length - 1));
+    let index = customerDB.length - 1;
+    let id;
+    let temp;
+    if (index != -1) {
+        id = customerDB[customerDB.length - 1].getCustomerID();
+        temp = id.split("-")[1];
+        temp++;
+    }
+
+    if (index == -1) {
+        $("#cusIdAdd").val("C00-001");
+    } else if (temp <= 9) {
+        $("#cusIdAdd").val("C00-00" + temp);
+    } else if (temp <= 99) {
+        $("#cusIdAdd").val("C00-0" + temp);
+    } else {
+        $("#cusIdAdd").val("C00-" + temp);
+    }
+}
+
+function disableEdit() {
+    $("#cusIdAdd,#cusIdUpdate").css("pointer-events", "none");
+}
