@@ -37,11 +37,11 @@ function ItemDTO(code,name,price,qty,btn) {
         return __iQty;
     }
 
-    this.setCustomerbtn = function (btn) {
+    this.setItemBtn = function (btn) {
         __btn=btn;
     }
 
-    this.getCustomerbtn = function () {
+    this.getItemBtn = function () {
         return __btn;
     }
 }
