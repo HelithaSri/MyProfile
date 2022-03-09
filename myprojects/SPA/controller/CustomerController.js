@@ -234,5 +234,5 @@ function disableEdit() {
 function clearFields() {
     $("#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields (Add)
     $("#cusNameUpdate,#cusAddressUpdate,#cusSalaryUpdate").val(""); // Clear input Fields (Update)
-    $("#button-cus-search").val(""); //Clear input Field (Search)
+    $("#txt-cus-search").val(""); //Clear input Field (Search)
 }
