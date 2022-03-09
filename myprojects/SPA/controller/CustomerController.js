@@ -60,11 +60,12 @@ function validation(regEx, id, error, nextId, btn) {
         }
     });
 }
+
 // Customer Validation Function - End
 
 // Customer Add Function - Start
 function addCustomer() {
-    
+
     $("#btnAddCus").click(function () {
 
         let custId = $("#cusIdAdd").val();
@@ -72,9 +73,9 @@ function addCustomer() {
         let custAddress = $("#cusAddressAdd").val();
         let custSalary = $("#cusSalaryAdd").val();
         let btns =
-        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger cus-delete'><i class='bi bi-trash'></i></button>";
+            "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger cus-delete'><i class='bi bi-trash'></i></button>";
 
-        var customerObj = new CustomerDTO(custId,custName,custAddress,custSalary,btns);
+        var customerObj = new CustomerDTO(custId, custName, custAddress, custSalary, btns);
         customerDB.push(customerObj);
 
         loadAllCustomers(); //load all customers
@@ -102,12 +103,11 @@ function loadAllCustomers() {
             "</td><td class='text-center'>" +
             customerDB[i].getCustomerbtn() +
             "</td></tr>";
-        
+
         $("#cusTblBody").append(nRow);
         bindCustomerRow();
         deleteCustomer();
     }
-    
 }
 // Load All Customers Function - End
 
@@ -184,7 +184,7 @@ function deleteCustomer() {
         }
         loadAllCustomers();
         clearFields()   //Clear Input Fields
-        
+
     });
 }
 //Delete Customer Function - End
@@ -232,7 +232,7 @@ function disableEdit() {
 }
 
 function clearFields() {
-    $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields (Add)
-    $("#cusIdUpdate,#cusNameUpdate,#cusAddressUpdate,#cusSalaryUpdate"); // Clear input Fields (Update)
-    $("#button-cus-search"); //Clear input Field (Search)
+    $("#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields (Add)
+    $("#cusNameUpdate,#cusAddressUpdate,#cusSalaryUpdate").val(""); // Clear input Fields (Update)
+    $("#button-cus-search").val(""); //Clear input Field (Search)
 }
