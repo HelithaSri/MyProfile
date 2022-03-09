@@ -5,7 +5,7 @@
  * @modify date : 2022-03-07  23:24
  * @desc [ItemController]
  */
-
+var clickedRowIId;
 /* Functions Call Section - Start */
 
 addItem();  //Add New Item
@@ -22,20 +22,24 @@ function addItem() {
         let itemName = $("#itemName").val();
         let itemQty = $("#itemQty").val();
         let itemPrice = $("#itemPrice").val();
+        let btns =
+        "<button class='btn btn-warning' data-bs-target='#updateItem' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button  class='btn btn-danger item-delete'><i class='bi bi-trash'></i></button>";
 
-        var itemObj = {
+        /* var itemObj = {
             __id: itemId,
             __name: itemName,
             __qty: itemQty,
             __price: itemPrice
-        }
+        } */
+
+        var itemObj = new ItemDTO(itemId,itemName,itemQty,itemPrice,btns)
 
         itemDB.push(itemObj);
         console.log(itemDB);
         loadAllItems(); //load all Items
         
         $("#itemCode,#itemName,#itemQty,#itemPrice").val(""); // Clear input Fields
-        bindItemRow(); //bind the events to the table rows after the row was added
+        //bindItemRow(); //bind the events to the table rows after the row was added
     });
 }
 // Item Add Function - End
@@ -43,37 +47,39 @@ function addItem() {
 // Load All Items Function - Start
 function loadAllItems() {
     $("#itemTblBody").empty(); //Duplicate Old rows remove
-    let btns =
+    /* let btns =
         "<button class='btn btn-warning' data-bs-target='#updateItem' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='item-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
-
+ */
     for (let i = 0; i < itemDB.length; i++) {
         let nRow =
             "<tr><td>" +
-            itemDB[i].__id +
+            itemDB[i].getItemCode() +
             "</td><td>" +
-            itemDB[i].__name +
+            itemDB[i].getItemName() +
             "</td><td>" +
-            itemDB[i].__qty +
+            itemDB[i].getItemQty() +
             "</td><td>" +
-            itemDB[i].__price +
+            itemDB[i].getItemPrice() +
             "</td><td class='text-center'>" +
-            btns +
+            itemDB[i].getItemBtn() +
             "</td></tr>";
         console.log("s");
         $("#itemTblBody").append(nRow);
+        bindItemRow();
+        deleteItem();
     }
 }
 // Load All Items Function - End
 
 // Bind Events Item Row Function - Start
 function bindItemRow() {
-    $("#itemTblBody>tr").click(function () {
-        let itemId = $(this).children(":eq(0)").text();
+    $("#itemTblBody > tr").click(function () {
+        clickedRowIId = $(this).children(":eq(0)").text();
         let itemName = $(this).children(":eq(1)").text();
-        let itemQty = $(this).children(":eq(2)").text();
-        let itemPrice = $(this).children(":eq(3)").text();
+        let itemPrice = $(this).children(":eq(2)").text();
+        let itemQty = $(this).children(":eq(3)").text();
 
-        $("#updateItemCode").val(itemId);
+        $("#updateItemCode").val(clickedRowIId);
         $("#updateItemName").val(itemName);
         $("#updateItemQty").val(itemQty);
         $("#updateItemPrice").val(itemPrice);
@@ -82,24 +88,24 @@ function bindItemRow() {
 // Bind Events Item Row - End
 
 $("#btn-item-search").click(function () {
-    let btns =
+    /* let btns =
         "<button class='btn btn-warning' data-bs-target='#updateItem' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='item-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
-
+ */
     var searchId = $("#txt-item-search").val();
     var response = searchItem(searchId);
     if (response) {
         $("#itemTblBody").empty();
         let nRow =
             "<tr><td>" +
-            response.__id +
+            response.getItemCode() +
             "</td><td>" +
-            response.__name +
+            response.getItemName() +
             "</td><td>" +
-            response.__qty +
+            response.getItemQty() +
             "</td><td>" +
-            response.__price +
+            response.getItemPrice() +
             "</td><td class='text-center'>" +
-            btns +
+            response.getItemBtn() +
             "</td></tr>";
         $("#itemTblBody").append(nRow);
         bindItemRow();
@@ -112,7 +118,7 @@ $("#btn-item-search").click(function () {
 
 function searchItem(id) {
     for (let i = 0; i < itemDB.length; i++) {
-        if (itemDB[i].__id == id) {
+        if (itemDB[i].getItemCode() == id) {
             return itemDB[i];
         }
     }
@@ -127,3 +133,37 @@ function clearSearch() {
     });
 }
 //clear search function - End
+
+function deleteItem() {
+    $(".item-delete").click(function () {
+        
+        for (let i = 0; i < itemDB.length; i++) {
+            console.log("awa");
+            // console.log(customerDB[i].getCustomerID());
+            if (itemDB[i].getItemCode() == clickedRowIId) {
+                itemDB.splice(i, 1);
+                console.log("if");
+            }else{
+                console.log("no");
+            }
+        }
+        loadAllItems();
+        // console.log("daf57");
+    });
+}
+
+$("#btnUpdateItem").click(function () {
+    let itemId = $("#updateItemCode").val();
+    let itemName = $("#updateItemName").val();
+    let itemQty = $("#updateItemQty").val();
+    let itemPrice = $("#updateItemPrice").val();
+    
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].getItemCode()==itemId) {
+            itemDB[i].setItemName(itemName);
+            itemDB[i].setItemQty(itemQty);
+            itemDB[i].setItemPrice(itemPrice);
+        }
+    }
+    loadAllItems();
+})
