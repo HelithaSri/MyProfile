@@ -11,6 +11,7 @@ var clickedRowIId;
 addItem();  //Add New Item
 loadAllItems(); //Load All items
 clearSearch();  //Clear Search and Refresh table
+generateItemId();
 
 /* Functions Call Section - End */
 
@@ -37,8 +38,8 @@ function addItem() {
         itemDB.push(itemObj);
         console.log(itemDB);
         loadAllItems(); //load all Items
-        
-        $("#itemCode,#itemName,#itemQty,#itemPrice").val(""); // Clear input Fields
+        // $("#itemCode,#itemName,#itemQty,#itemPrice").val(""); // Clear input Fields
+        generateItemId();
         //bindItemRow(); //bind the events to the table rows after the row was added
     });
 }
@@ -167,4 +168,26 @@ $("#btnUpdateItem").click(function () {
         }
     }
     loadAllItems();
-})
+});
+
+function generateItemId() {
+    let index = indexedDB.length - 1;
+    let id;
+    let temp;
+    if (index != -1) {
+        id = indexedDB[indexedDB.length - 1].getItemCode();
+        temp = id.split("-")[1];
+        temp++;
+    }
+
+    if (index == -1) {
+        $("#itemCode").val("I00-001");
+    } else if (temp <= 9) {
+        $("#itemCode").val("I00-00" + temp);
+    } else if (temp <= 99) {
+        $("#itemCode").val("I00-0" + temp);
+    } else {
+        $("#itemCode").val("I00-" + temp);
+    }
+}
+
