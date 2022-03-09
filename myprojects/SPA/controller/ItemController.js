@@ -8,10 +8,11 @@
 var clickedRowIId;
 /* Functions Call Section - Start */
 
+generateItemId();   //Generate New Item Code
 addItem();  //Add New Item
 loadAllItems(); //Load All items
 clearSearch();  //Clear Search and Refresh table
-generateItemId();
+disableEditFields();    //Prevent Editing Item Code
 
 /* Functions Call Section - End */
 
@@ -69,6 +70,7 @@ function loadAllItems() {
         bindItemRow();
         deleteItem();
     }
+    clearFieldsItem();
 }
 // Load All Items Function - End
 
@@ -114,6 +116,7 @@ $("#btn-item-search").click(function () {
     } else {
         alert("No Such a Item");
         clearSearch(); //Clear Search and Refresh table
+        loadAllItems();
 
     }
 });
@@ -171,11 +174,11 @@ $("#btnUpdateItem").click(function () {
 });
 
 function generateItemId() {
-    let index = indexedDB.length - 1;
+    let index = itemDB.length - 1;
     let id;
     let temp;
     if (index != -1) {
-        id = indexedDB[indexedDB.length - 1].getItemCode();
+        id = itemDB[itemDB.length - 1].getItemCode();
         temp = id.split("-")[1];
         temp++;
     }
@@ -191,3 +194,12 @@ function generateItemId() {
     }
 }
 
+function disableEditFields() {
+    $("#itemCode,#updateItemCode").css("pointer-events", "none");
+}
+
+function clearFieldsItem() {
+    $("#itemName,#itemQty,#itemPrice").val("");    // Clear input Fields (Add)
+    $("#updateItemName,#updateItemQty,#updateItemPrice").val(""); // Clear input Fields (Update)
+    $("#txt-item-search").val(""); //Clear input Field (Search)
+}
