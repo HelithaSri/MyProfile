@@ -38,7 +38,9 @@ disableEdit();  //Prevent Editing Customer ID
 
 /* Functions Call Section - End */
 
-
+$("#addCusModelPop").click(function(){
+    generateId();
+});
 
 // Customer Validation Function - Start
 function validation(regEx, id, error, nextId, btn) {
@@ -74,10 +76,10 @@ function addCustomer() {
 
         var customerObj = new CustomerDTO(custId,custName,custAddress,custSalary,btns);
         customerDB.push(customerObj);
-        
+
         loadAllCustomers(); //load all customers
         clearFields()   //Clear Input Fields
-        generateId()
+        generateId();
     });
 }
 // Customer Add Function - End
@@ -105,6 +107,7 @@ function loadAllCustomers() {
         bindCustomerRow();
         deleteCustomer();
     }
+    
 }
 // Load All Customers Function - End
 
@@ -150,7 +153,6 @@ $("#button-cus-search").click(function () {
     } else {
         alert("No Such a customer");
         clearSearch(); //Clear Search and Refresh table
-
     }
 });
 
@@ -182,6 +184,7 @@ function deleteCustomer() {
         }
         loadAllCustomers();
         clearFields()   //Clear Input Fields
+        
     });
 }
 //Delete Customer Function - End
