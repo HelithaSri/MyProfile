@@ -109,6 +109,7 @@ $("#btn-item-search").click(function () {
             "</td></tr>";
         $("#itemTblBody").append(nRow);
         bindItemRow();
+        deleteItem();
     } else {
         alert("No Such a Item");
         clearSearch(); //Clear Search and Refresh table
