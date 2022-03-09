@@ -62,7 +62,7 @@ function validation(regEx, id, error, nextId, btn) {
 
 // Customer Add Function - Start
 function addCustomer() {
-    // var customerObj = new CustomerObject();
+    
     $("#btnAddCus").click(function () {
 
         let custId = $("#cusIdAdd").val();
@@ -72,25 +72,20 @@ function addCustomer() {
         let btns =
         "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button class='btn btn-danger cus-delete'><i class='bi bi-trash'></i></button>";
 
-        /* var customerObj = {
-            __id: custId,
-            __name: custName,
-            __address: custAddress,
-            __salary: custSalary
-        } */
-
         var customerObj = new CustomerDTO(custId,custName,custAddress,custSalary,btns);
         customerDB.push(customerObj);
+        
         loadAllCustomers(); //load all customers
-        $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields
-        //bindCustomerRow(); //bind the events to the table rows after the row was added
+        clearFields()   //Clear Input Fields
         generateId()
     });
 }
 // Customer Add Function - End
 
+
 // Load All Customers Function - Start
 function loadAllCustomers() {
+
     $("#cusTblBody").empty(); //Duplicate Old rows remove
     for (let i = 0; i < customerDB.length; i++) {
         let nRow =
@@ -105,13 +100,14 @@ function loadAllCustomers() {
             "</td><td class='text-center'>" +
             customerDB[i].getCustomerbtn() +
             "</td></tr>";
-        console.log("s");
+        
         $("#cusTblBody").append(nRow);
         bindCustomerRow();
         deleteCustomer();
     }
 }
 // Load All Customers Function - End
+
 
 // Bind Events Customer Row Function - Start
 function bindCustomerRow() {
@@ -131,9 +127,7 @@ function bindCustomerRow() {
 // Bind Events Customer Row - End
 
 $("#button-cus-search").click(function () {
-    /* let btns =
-        "<button class='btn btn-warning' data-bs-target='#updateCustomer' data-bs-toggle='modal'><i class='bi bi-arrow-clockwise'></i></button> <button id='cus-delete' class='btn btn-danger'><i class='bi bi-trash'></i></button>";
- */
+
     var searchId = $("#txt-cus-search").val();
     var response = searchCustomer(searchId);
     if (response) {
@@ -172,26 +166,25 @@ function searchCustomer(id) {
 function clearSearch() {
     $("#clear-btn-cus").click(function () {
         loadAllCustomers(); //load all customers
-        $("#txt-cus-search").val("");
+        clearFields()   //Clear Input Fields
     });
 }
 //clear search function - End
 
+//Delete Customer Function - Start
 function deleteCustomer() {
     $(".cus-delete").click(function () {
-        
         for (let i = 0; i < customerDB.length; i++) {
-
             // console.log(customerDB[i].getCustomerID());
             if (customerDB[i].getCustomerID() == clickedRowCId) {
                 customerDB.splice(i, 1);
             }
         }
         loadAllCustomers();
-        // console.log("daf57");
+        clearFields()   //Clear Input Fields
     });
 }
-
+//Delete Customer Function - End
 
 $("#btnUpdateCus").click(function () {
     let custId = $("#cusIdUpdate").val();
@@ -207,11 +200,10 @@ $("#btnUpdateCus").click(function () {
         }
     }
     loadAllCustomers();
-    //bindCustomerRow();
+    clearFields()   //Clear Input Fields
 });
 
 function generateId() {
-    // console.log((customerDB.length - 1));
     let index = customerDB.length - 1;
     let id;
     let temp;
@@ -234,4 +226,10 @@ function generateId() {
 
 function disableEdit() {
     $("#cusIdAdd,#cusIdUpdate").css("pointer-events", "none");
+}
+
+function clearFields() {
+    $("#cusIdAdd,#cusNameAdd,#cusAddressAdd,#cusSalaryAdd").val("");    // Clear input Fields (Add)
+    $("#cusIdUpdate,#cusNameUpdate,#cusAddressUpdate,#cusSalaryUpdate"); // Clear input Fields (Update)
+    $("#button-cus-search"); //Clear input Field (Search)
 }
