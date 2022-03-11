@@ -1,5 +1,7 @@
-generateOrderId();
-disableEdit();
+generateOrderId();  //Generate Order Id
+disableEdit();  //Prevent Editing Input Fields
+setDate();  //Set Time
+
 
 $("#idCmb").change(function(e){
     let selectedCus = $('#idCmb').find(":selected").text();
@@ -67,7 +69,7 @@ function selectedItem(ItemId) {
 
 /* Prevent Clicking input Fields */
 function disableEdit() {
-    $("#oId,#inCusName,#inCusSalary,#inCusaddress").css("pointer-events", "none");  //Invoice Details Section
+    $("#oId,#inCusName,#inCusSalary,#inCusaddress,#iDate").css("pointer-events", "none");  //Invoice Details Section
     $("#itemNameO,#qtyOnHandO,#priceO").css("pointer-events", "none");  //Item Select Section
     $("#balanceO").css("pointer-events", "none");  //Total Section
 }
@@ -91,4 +93,13 @@ function generateOrderId() {
     } else {
         $("#oId").val("O00-" + temp);
     }
+}
+
+/* Set Current Date to datepicker */
+function setDate() {
+    let d = new Date();
+    let dd = d.toISOString().split("T")[0].split("-");
+    // console.log(dd);
+    $("#iDate").val(dd[0]+"-"+dd[1]+"-"+dd[2]);
+    $("#hDate").text(dd[0]+"-"+dd[1]+"-"+dd[2]);
 }
