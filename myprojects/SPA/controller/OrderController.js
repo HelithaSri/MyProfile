@@ -1,17 +1,19 @@
+var selectedItemId;
+var selectedCustomerId;
+
 generateOrderId();  //Generate Order Id
 disableEdit();  //Prevent Editing Input Fields
 setDate();  //Set Time
 
 
 $("#idCmb").change(function(e){
-    let selectedCus = $('#idCmb').find(":selected").text();
-    selectedCustomer(selectedCus);
-
+    selectedCustomerId = $('#idCmb').find(":selected").text();
+    selectedCustomer(selectedCustomerId);
 });
 
 $("#itemIdCmb").change(function(){
-    let selected_Item = $('#itemIdCmb').find(":selected").text();
-    selectedItem(selected_Item);
+    selectedItemId = $('#itemIdCmb').find(":selected").text();
+    selectedItem(selectedItemId);
 });
 
 //------------------------------------------------------
@@ -102,4 +104,14 @@ function setDate() {
     // console.log(dd);
     $("#iDate").val(dd[0]+"-"+dd[1]+"-"+dd[2]);
     $("#hDate").text(dd[0]+"-"+dd[1]+"-"+dd[2]);
+}
+
+function addItem() {
+    let id = selectedItemId;
+    let iName = $("#itemNameO").val();
+    let iQtyOnHand = $("#qtyOnHandO").val();
+    let iPrice = $("#priceO").val();
+    let iOrderQTY = $("#oQty").val();
+
+    let row = 
 }
