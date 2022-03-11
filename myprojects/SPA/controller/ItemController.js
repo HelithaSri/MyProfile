@@ -42,7 +42,7 @@ function addItem() {
         // $("#itemCode,#itemName,#itemQty,#itemPrice").val(""); // Clear input Fields
         generateItemId();
         //bindItemRow(); //bind the events to the table rows after the row was added
-        loadAllItemCodes();
+        loadAllItemCodes(); //Load Item ID's to Combo Box
     });
 }
 // Item Add Function - End
