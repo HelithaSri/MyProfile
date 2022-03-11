@@ -81,6 +81,7 @@ function addCustomer() {
         loadAllCustomers(); //load all customers
         clearFields()   //Clear Input Fields
         generateId();
+        loadAllCustomerIds();   //Load Customer ID's to Combo Box
     });
 }
 // Customer Add Function - End
