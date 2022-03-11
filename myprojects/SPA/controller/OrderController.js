@@ -2,14 +2,14 @@ generateOrderId();
 disableEdit();
 
 $("#idCmb").change(function(e){
-    
     let selectedCus = $('#idCmb').find(":selected").text();
     selectedCustomer(selectedCus);
 
 });
 
-$("#itemIdCmb").click(function(){
-    
+$("#itemIdCmb").change(function(){
+    let selected_Item = $('#itemIdCmb').find(":selected").text();
+    selectedItem(selected_Item);
 });
 
 //------------------------------------------------------
@@ -42,15 +42,25 @@ function loadAllItemCodes() {
 }
 
 /* Load Customer Data To input Fields */
-function selectedCustomer(objects) {
-    console.log(objects);
-
+function selectedCustomer(CustomerId) {
     for (const i in customerDB) {
-        if (customerDB[i].getCustomerID()==objects) {
+        if (customerDB[i].getCustomerID()==CustomerId) {
             let element = customerDB[i];
             $("#inCusName").val(element.getCustomerName());
             $("#inCusSalary").val(element.getCustomerSalary());
             $("#inCusaddress").val(element.getCustomerAddress());
+        }
+    }
+}
+
+/* Load Item Data To input Fields */
+function selectedItem(ItemId) {
+    for (const i in itemDB) {
+        if (itemDB[i].getItemCode()==ItemId) {
+            let element = itemDB[i];
+            $("#itemNameO").val(element.getItemName());
+            $("#qtyOnHandO").val(element.getItemQty());
+            $("#priceO").val(element.getItemPrice());
         }
     }
 }
