@@ -65,6 +65,7 @@ function selectedItem(ItemId) {
     }
 }
 
+/* Prevent Clicking input Fields */
 function disableEdit() {
     $("#oId,#inCusName,#inCusSalary,#inCusaddress").css("pointer-events", "none");  //Invoice Details Section
     $("#itemNameO,#qtyOnHandO,#priceO").css("pointer-events", "none");  //Item Select Section
