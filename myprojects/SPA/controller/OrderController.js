@@ -9,6 +9,10 @@ $("#btnAddToCart").click(function(){
     addItemToCart();
 });
 
+$("#btnPurchase").click(function(){
+    
+});
+
 $("#idCmb").change(function(){
     selectedCustomerId = $('#idCmb').find(":selected").text();
     selectedCustomer(selectedCustomerId);
@@ -17,7 +21,27 @@ $("#idCmb").change(function(){
 $("#itemIdCmb").change(function(){
     selectedItemId = $('#itemIdCmb').find(":selected").text();
     selectedItem(selectedItemId);
+    
 });
+
+$("#discount").keyup(function(event){
+    if (event.key == "Enter") {
+        discountCal();
+        alert("d");
+    }
+});
+
+$("#cash").keyup(function (event) {
+    if (event.key == "Enter") {
+        let subTotal = parseInt($("#lblSubTotal").text());
+        let cash = parseInt($("#cash").val());
+        let balance = cash - subTotal;
+        $("#balanceO").val(balance);
+    }
+
+});
+
+
 
 //------------------------------------------------------
 
@@ -127,8 +151,6 @@ function addItemToCart() {
         $("#oQty").val("");
         return;
     }
-    
-
 
     //updateing qty
     for (let i = 0; i < itemDB.length; i++) {
@@ -147,7 +169,7 @@ function addItemToCart() {
         `<tr><td>${id}</td><td>${iName}</td><td>${iPrice}</td><td>${iOrderQTY}<td>${total}</td></tr>`;
         $("#tbodyOrder").append(row);
         $("#lblFullTotal").text(fullTotal+" LKR");
-        alert("23445");
+        // alert("23445");
         clearInputItems();
 
     }else{
@@ -167,7 +189,7 @@ function addItemToCart() {
         $('#tbodyOrder tr').eq(rowNo).children(":eq(4)").text(newTotal);
 
         $("#lblFullTotal").text(fullTotal+" LKR");
-        alert("test");
+        // alert("test");
         clearInputItems();
     }
 
@@ -177,7 +199,7 @@ function addItemToCart() {
 function checkDuplicates(itemId) {
     for (let i = 0; i < $("#tbodyOrder > tr").length; i++) {
         if (itemId == $('#tbodyOrder').children().eq(i).children().eq(0).text()) {
-            alert(i);
+            // alert(i);
             return i;
         }
         
@@ -192,4 +214,24 @@ function clearInputItems() {
     $("#qtyOnHandO").val("");
     $("#priceO").val("");
     $("#oQty").val("");
+}
+
+function discountCal() {
+    /* let discount = parseInt($("#cash").val());
+    let discounted_price = parseInt((fullTotal - (total * discount / 100)));
+    console.log(typeof discounted_price);
+    // $("#lblSubTotal").text(discounted_price +" LKR");
+    $("#lblSubTotal").text(discounted_price); */
+    var discount =0;
+    var discounted_price=0;
+
+    discount = parseInt($("#cash").val());
+    discounted_price = parseInt((fullTotal - (fullTotal * discount / 100)));
+    console.log(typeof discounted_price);
+    // $("#lblSubTotal").text(discounted_price +" LKR");
+    $("#lblSubTotal").text(discounted_price);
+}
+
+function purchaseOrder() {
+    
 }
