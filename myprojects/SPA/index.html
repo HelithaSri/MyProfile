@@ -43,6 +43,9 @@
                         <li class="nav-item">
                             <a id="item-click" class="nav-link">Items</a>
                         </li>
+                        <li class="nav-item">
+                            <a id="orderDetails-click" class="nav-link">Order Details</a>
+                        </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -95,18 +98,18 @@
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <a id="user-clicks" class="nav-link p-0 text-white">
+                    <a id="orderDetails-clicks" class="nav-link p-0 text-white">
                         <div class="modal-dialog shadow-lg">
                             <div class="modal-content justify-content-center align-items-center"
                                 style="height: 10rem; background-color: #e67e22">
-                                <h3 class="modal-title fw-bold">USER</h3>
+                                <h3 class="modal-title fw-bold">ORDER DETAILS</h3>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
-
+    
         <section id="order" class="container-fluid">
             <div class="row align-items-center">
                 <!-- invoice -->
@@ -133,23 +136,23 @@
                                         <select class="form-select" id="idCmb">
                                             <option value="" disabled selected>Select Customer ID</option>
                                             <!-- <option value="1">C002</option>
-                                             <option value="2">C002</option>
-                                            <option value="3">C003</option> -->
+                                                 <option value="2">C002</option>
+                                                <option value="3">C003</option> -->
                                         </select>
                                     </div>
                                     <div class="col">
                                         <label for="inCusName" class="form-label fw-bold">Customer Name:</label>
-                                        <input type="text" class="form-control" id="inCusName"/>
+                                        <input type="text" class="form-control" id="inCusName" />
                                     </div>
                                 </div>
                                 <div class="row mt-3 mb-3">
                                     <div class="col">
                                         <label for="salary" class="form-label fw-bold">Salary:</label>
-                                        <input type="number" class="form-control" id="inCusSalary"/>
+                                        <input type="number" class="form-control" id="inCusSalary" />
                                     </div>
                                     <div class="col">
                                         <label for="address" class="form-label fw-bold">Address:</label>
-                                        <input type="text" class="form-control" id="inCusaddress"/>
+                                        <input type="text" class="form-control" id="inCusaddress" />
                                     </div>
                                 </div>
                             </div>
@@ -170,30 +173,30 @@
                                         <select class="form-select" id="itemIdCmb">
                                             <option value="" disabled selected>Select Item ID</option>
                                             <!-- <option selected>I001</option>
-                                            <option value="1">I001</option>
-                                            <option value="2">I002</option>
-                                            <option value="3">I003</option> -->
+                                                <option value="1">I001</option>
+                                                <option value="2">I002</option>
+                                                <option value="3">I003</option> -->
                                         </select>
                                     </div>
                                     <div class="col">
                                         <label for="itemNameO" class="form-label fw-bold">Item Name:</label>
-                                        <input type="text" class="form-control" id="itemNameO"/>
+                                        <input type="text" class="form-control" id="itemNameO" />
                                     </div>
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col">
                                         <label for="qtyOnHandO" class="form-label fw-bold">Qty On Hand:</label>
-                                        <input type="number" class="form-control" id="qtyOnHandO"/>
+                                        <input type="number" class="form-control" id="qtyOnHandO" />
                                     </div>
                                     <div class="col">
                                         <label for="priceO" class="form-label fw-bold">Price:</label>
-                                        <input type="text" class="form-control" id="priceO"/>
+                                        <input type="text" class="form-control" id="priceO" />
                                     </div>
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col">
                                         <label for="oQty" class="form-label fw-bold">Order Quantity:</label>
-                                        <input type="number" class="form-control" id="oQty"/>
+                                        <input type="number" class="form-control" id="oQty" />
                                     </div>
                                 </div>
                                 <div class="row mt-3 mb-1">
@@ -235,7 +238,7 @@
                                 <div class="row mt-3">
                                     <div class="col">
                                         <label for="balanceO" class="form-label fw-bold">Balance:</label>
-                                        <input type="text" class="form-control" id="balanceO"/>
+                                        <input type="text" class="form-control" id="balanceO" />
                                     </div>
                                 </div>
                                 <div class="row mt-3 mb-1">
@@ -261,17 +264,16 @@
                             </tr>
                         </thead>
                         <tbody id="tbodyOrder">
-                            
+    
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
-
+    
         <section id="item" class="container">
             <!-- Add Item Model Start -->
-            <div class="modal fade" id="addItem" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-                tabindex="-1">
+            <div class="modal fade" id="addItem" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header bg-success text-white">
@@ -304,7 +306,7 @@
                             <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
                                 Cancle
                             </button>
-                            <button  id="btnAddItem" type="button" class="btn btn-primary mt-2">
+                            <button id="btnAddItem" type="button" class="btn btn-primary mt-2">
                                 Add Item
                             </button>
                         </div>
@@ -312,7 +314,7 @@
                 </div>
             </div>
             <!-- Add Item Model End -->
-
+    
             <!-- Update Item Model Start -->
             <div class="modal fade" id="updateItem" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
                 tabindex="-1">
@@ -348,7 +350,7 @@
                             <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
                                 Cancle
                             </button>
-                            <button  id="btnUpdateItem" type="button" class="btn btn-primary mt-2">
+                            <button id="btnUpdateItem" type="button" class="btn btn-primary mt-2">
                                 Update Item
                             </button>
                         </div>
@@ -356,17 +358,17 @@
                 </div>
             </div>
             <!-- Update Item Model End -->
-
+    
             <div class="rounded-3 p-3" style="background-color: #dde4f0; margin-top: 30px">
                 <h1 class="text-center mb-3">
                     <i class="bi bi-box-seam m-2"></i>ITEM
                 </h1>
-            
+    
                 <div class="row g-3 align-items-center pb-3 justify-content-between">
                     <div class="col-12 col-md-6 col-xl-5">
                         <div class="input-group mb-3" style="height: 10px">
-                            <input id="txt-item-search" type="text" class="form-control" placeholder="Search Item" aria-label="Recipient's username"
-                                aria-describedby="btn-item-search" />
+                            <input id="txt-item-search" type="text" class="form-control" placeholder="Search Item"
+                                aria-label="Recipient's username" aria-describedby="btn-item-search" />
                             <button class="btn btn-success" type="button" id="btn-item-search">
                                 <i class="bi bi-search m-2"></i>Search
                             </button>
@@ -397,47 +399,47 @@
                                 </thead>
                                 <tbody id="itemTblBody">
                                     <!-- <tr>
-                                        <th scope="row">I001</th>
-                                        <td>Mouse</td>
-                                        <td>2000</td>
-                                        <td>100</td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning">
-                                                <i class="bi bi-arrow-clockwise"></i>
-                                            </button>
-                                            <button class="btn btn-danger">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">I002</th>
-                                        <td>Keyboard</td>
-                                        <td>2000</td>
-                                        <td>100</td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning">
-                                                <i class="bi bi-arrow-clockwise"></i>
-                                            </button>
-                                            <button class="btn btn-danger">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">I003</th>
-                                        <td>GamePad</td>
-                                        <td>1000</td>
-                                        <td>100</td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning">
-                                                <i class="bi bi-arrow-clockwise"></i>
-                                            </button>
-                                            <button class="btn btn-danger">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr> -->
+                                            <th scope="row">I001</th>
+                                            <td>Mouse</td>
+                                            <td>2000</td>
+                                            <td>100</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">I002</th>
+                                            <td>Keyboard</td>
+                                            <td>2000</td>
+                                            <td>100</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">I003</th>
+                                            <td>GamePad</td>
+                                            <td>1000</td>
+                                            <td>100</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -463,114 +465,115 @@
                     </div>
                 </div>
             </div>
-            </section>
-            
-            <section id="cutomer" class="container">
-                <!-- Add Customer Model Start -->
-                <div class="modal fade" id="addCustomer" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header bg-success text-white">
-                                <h5 class="modal-title" id="exampleModalToggleLabel">
-                                    <i class="bi bi-person-plus-fill m-2"></i>Add Customer
-                                </h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="cusIdAdd" class="form-label">Customer ID</label>
-                                        <input type="text" class="form-control" id="cusIdAdd" />
-                                        <small id="error1">* Customer ID is a required field, Pattern C00-001</small>
-                                        <!-- <small id="error1"></small> -->
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="cusNameAdd" class="form-label">Customer Name</label>
-                                        <input type="text" class="form-control" id="cusNameAdd" />
-                                        <small id="error2">* Customer Name is required field, Min 5 & Max 10</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="cusAddressAdd" class="form-label">Customer Address</label>
-                                        <input type="text" class="form-control" id="cusAddressAdd" />
-                                        <small id="error3">* Customer Address is required field, Min 5</small>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="cusSalaryAdd" class="form-label">Customer Salary</label>
-                                        <input type="text" class="form-control" id="cusSalaryAdd" />
-                                        <small id="error4">* Customer Address is required field, Ex:500.00</small>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
-                                    Cancle
-                                </button>
-                                <button id="btnAddCus" type="button" class="btn btn-primary mt-2">
-                                    Add Customer
-                                </button>
-                            </div>
+        </section>
+    
+        <section id="cutomer" class="container">
+            <!-- Add Customer Model Start -->
+            <div class="modal fade" id="addCustomer" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">
+                                <i class="bi bi-person-plus-fill m-2"></i>Add Customer
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="cusIdAdd" class="form-label">Customer ID</label>
+                                    <input type="text" class="form-control" id="cusIdAdd" />
+                                    <small id="error1">* Customer ID is a required field, Pattern C00-001</small>
+                                    <!-- <small id="error1"></small> -->
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cusNameAdd" class="form-label">Customer Name</label>
+                                    <input type="text" class="form-control" id="cusNameAdd" />
+                                    <small id="error2">* Customer Name is required field, Min 5 & Max 10</small>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cusAddressAdd" class="form-label">Customer Address</label>
+                                    <input type="text" class="form-control" id="cusAddressAdd" />
+                                    <small id="error3">* Customer Address is required field, Min 5</small>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cusSalaryAdd" class="form-label">Customer Salary</label>
+                                    <input type="text" class="form-control" id="cusSalaryAdd" />
+                                    <small id="error4">* Customer Address is required field, Ex:500.00</small>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
+                                Cancle
+                            </button>
+                            <button id="btnAddCus" type="button" class="btn btn-primary mt-2">
+                                Add Customer
+                            </button>
                         </div>
                     </div>
                 </div>
-                <!-- Add Customer Model End -->
-            
-                <!-- Update Customer Model Start -->
-                <div class="modal fade" id="updateCustomer" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-                    tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header bg-success text-white">
-                                <h5 class="modal-title" id="exampleModalToggleLabel">
-                                    <i class="bi bi-person-plus-fill m-2"></i>Update Customer
-                                </h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="cusIdUpdate" class="form-label">Customer ID</label>
-                                        <input type="text" class="form-control" id="cusIdUpdate" />
-                                        <small id="error01">* Customer ID is a required field, Pattern C00-001</small>
-            
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="cusNameUpdate" class="form-label">Customer Name</label>
-                                        <input type="text" class="form-control" id="cusNameUpdate" />
-                                        <small id="error02">* Customer Name is required field, Min 5 & Max 10</small>
-            
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="cusAddressUpdate" class="form-label">Customer Address</label>
-                                        <input type="text" class="form-control" id="cusAddressUpdate" />
-                                        <small id="error03">* Customer Address is required field, Min 5</small>
-            
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="cusSalaryUpdate" class="form-label">Customer Salary</label>
-                                        <input type="text" class="form-control" id="cusSalaryUpdate" />
-                                        <small id="error04">* Customer Address is required field, Ex:500.00</small>
-            
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
-                                    Cancle
-                                </button>
-                                <button id="btnUpdateCus" type="button" class="btn btn-primary mt-2">
-                                    Update Customer
-                                </button>
-                            </div>
+            </div>
+            <!-- Add Customer Model End -->
+    
+            <!-- Update Customer Model Start -->
+            <div class="modal fade" id="updateCustomer" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">
+                                <i class="bi bi-person-plus-fill m-2"></i>Update Customer
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="cusIdUpdate" class="form-label">Customer ID</label>
+                                    <input type="text" class="form-control" id="cusIdUpdate" />
+                                    <small id="error01">* Customer ID is a required field, Pattern C00-001</small>
+    
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cusNameUpdate" class="form-label">Customer Name</label>
+                                    <input type="text" class="form-control" id="cusNameUpdate" />
+                                    <small id="error02">* Customer Name is required field, Min 5 & Max 10</small>
+    
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cusAddressUpdate" class="form-label">Customer Address</label>
+                                    <input type="text" class="form-control" id="cusAddressUpdate" />
+                                    <small id="error03">* Customer Address is required field, Min 5</small>
+    
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cusSalaryUpdate" class="form-label">Customer Salary</label>
+                                    <input type="text" class="form-control" id="cusSalaryUpdate" />
+                                    <small id="error04">* Customer Address is required field, Ex:500.00</small>
+    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">
+                                Cancle
+                            </button>
+                            <button id="btnUpdateCus" type="button" class="btn btn-primary mt-2">
+                                Update Customer
+                            </button>
                         </div>
                     </div>
                 </div>
-                <!-- Update Customer Model End -->
-
+            </div>
+            <!-- Update Customer Model End -->
+    
             <div class="rounded-3 p-3" style="background-color: #dde4f0; margin-top: 30px">
                 <h1 class="text-center mb-3">
                     <i class="bi bi-people-fill m-2"></i>Customer
                 </h1>
-
+    
                 <div class="row g-3 align-items-center pb-3 justify-content-between">
                     <div class="col-12 col-md-6 col-xl-5">
                         <div class="input-group mb-3" style="height: 10px">
@@ -607,47 +610,47 @@
                                 </thead>
                                 <tbody id="cusTblBody">
                                     <!-- <tr>
-                                        <th scope="row">C001</th>
-                                        <td>Sri</td>
-                                        <td>Kandy</td>
-                                        <td>100000</td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning">
-                                                <i class="bi bi-arrow-clockwise"></i>
-                                            </button>
-                                            <button class="btn btn-danger">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">C002</th>
-                                        <td>Danapala</td>
-                                        <td>Gampola</td>
-                                        <td>50000</td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning">
-                                                <i class="bi bi-arrow-clockwise"></i>
-                                            </button>
-                                            <button class="btn btn-danger">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">C003</th>
-                                        <td>Somapala</td>
-                                        <td>Colombo</td>
-                                        <td>60000</td>
-                                        <td class="text-center">
-                                            <button class="btn btn-warning">
-                                                <i class="bi bi-arrow-clockwise"></i>
-                                            </button>
-                                            <button class="btn btn-danger">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr> -->
+                                            <th scope="row">C001</th>
+                                            <td>Sri</td>
+                                            <td>Kandy</td>
+                                            <td>100000</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">C002</th>
+                                            <td>Danapala</td>
+                                            <td>Gampola</td>
+                                            <td>50000</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">C003</th>
+                                            <td>Somapala</td>
+                                            <td>Colombo</td>
+                                            <td>60000</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-warning">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </button>
+                                                <button class="btn btn-danger">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -674,7 +677,91 @@
                 </div>
             </div>
         </section>
-            
+
+        <section id="orderDetailsSec" class="container">   
+            <div class="rounded-3 p-3" style="background-color: #dde4f0; margin-top: 30px">
+                <h1 class="text-center mb-3">
+                    <i class="bi bi-box-seam m-2"></i>ORDER DETAILS
+                </h1>
+    
+                <div class="row g-3 align-items-center pb-3 justify-content-between">
+                    <div class="col-12 col-md-6 col-xl-5">
+                        <div class="input-group mb-3" style="height: 10px">
+                            <input id="txt-order-search" type="text" class="form-control" placeholder="Search Order"
+                                aria-label="Recipient's username" aria-describedby="btn-order-search" />
+                            <button class="btn btn-success" type="button" id="btn-order-search">
+                                <i class="bi bi-search m-2"></i>Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-4 col-xl-3" style="display: flex; align-items: center; justify-content: space-evenly;">
+                        <button id="clear-btn-order" type="button" class="btn btn-danger mt-2">
+                            <i class="bi bi-backspace m-2"></i>Clear
+                        </button>
+                        <div style="display: flex;
+                        flex-direction: column;">
+                            <div>
+                                <h6 class="d-inline">Order ID : </h6>
+                                <h6 id="lblOrderId" class="d-inline">O00-001 </h6>
+                            </div>
+                            <div>
+                                <h6 class="d-inline">Customer ID : </h6>
+                                <h6 id="lblCusId" class="d-inline">C00-001 </h6>
+                            </div>
+                            <div>
+                                <h6 class="d-inline">Date : </h6>
+                                <h6 id="lblDate" class="d-inline">2021-01-05 </h6>
+                            </div>
+                            <div>
+                                <h6 class="d-inline">Sub Total : </h6>
+                                <h6 id="lblSTotal" class="d-inline">1000 LKR </h6>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                
+                <hr />
+                <div class="row align-items-center pt-3">
+                    <div class="col-12 mt-2">
+                        <div class="table-responsive" style="height: 55vh">
+                            <table class="table table-light table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Item Code</th>
+                                        <th>Item Name</th>
+                                        <th>Unit Price</th>
+                                        <th>Qty</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orderDetailsTblBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- <div class="col">
+                        <nav class="mt-2">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <span class="page-link">Previous</span>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item" aria-current="page">
+                                    <span class="page-link">2</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    
     </main>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -688,6 +775,7 @@
     <script src="controller/CustomerController.js"></script>
     <script src="controller/ItemController.js"></script>
     <script src="controller/OrderController.js"></script>
+    <script src="controller/OrderDetailsController.js"></script>
     <script src="assets/js/script.js"></script>
     
 </body>
