@@ -33,9 +33,6 @@ function searchOrderDetails(result) {
                 `<tr><td>${od.getItemCode()}</td><td>${od.getItemName()}</td><td>${od.getItemUnitPrice()}</td><td>${od.getItemQty()}<td>${od.getTotAmount()}</td></tr>`;
             $("#orderDetailsTblBody").append(row);
 
-        } else {
-            console.log(false);
         }
     }
-
 }

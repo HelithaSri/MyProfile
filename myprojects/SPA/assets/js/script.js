@@ -1,8 +1,8 @@
-document.getElementById("home").style.setProperty("Display","none","important");
+// document.getElementById("home").style.setProperty("Display","none","important");
 document.getElementById("order").style.setProperty("Display","none","important");
 document.getElementById("item").style.setProperty("Display","none","important");
 document.getElementById("cutomer").style.setProperty("Display","none","important");
-// document.getElementById("orderDetailsSec").style.setProperty("Display","none","important");
+document.getElementById("orderDetailsSec").style.setProperty("Display","none","important");
 
 // NavBar clicks
 document.getElementById("home-click").addEventListener("click",function (){
