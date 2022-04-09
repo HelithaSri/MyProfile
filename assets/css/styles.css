@@ -105,14 +105,17 @@ header > nav > ul > li > a:hover {
 }
 
 #mobile_menu_btn, #mobile_menu_close_btn > i{
-  color: #fec51c;
   color: white;
   font-size: 27px;
 }
 
-#mobile_menu_btn, #mobile_menu_close_btn > i:hover{
+#mobile_menu_btn>i:hover{
   color: #fec51c;
   /* color: white; */
+  font-size: 27px;
+}
+#mobile_menu_close_btn>i:hover{
+  color: #fec51c;
   font-size: 27px;
 }
 
