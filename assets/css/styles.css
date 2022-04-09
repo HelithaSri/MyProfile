@@ -1894,6 +1894,7 @@ textarea {
     flex-direction: column;
     flex-wrap: nowrap;
     margin-top: 170px;
+    gap: 40px;
   }
 
   #sec-home > div > img {
