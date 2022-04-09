@@ -86,7 +86,7 @@ header > nav > ul > li > a:hover {
   display: none;
 }
 
-main > section:nth-child(1) {
+#sec-home {
   background-image: url("../img/covers.png");
   /* height: 857px; */
   height: 92vh;
@@ -96,7 +96,7 @@ main > section:nth-child(1) {
   position: relative;
 }
 
-main > section:nth-child(1) > div {
+#sec-home > div {
   position: absolute;
   top: 0;
   left: 156px;
@@ -106,7 +106,7 @@ main > section:nth-child(1) > div {
   width: 925px;
 }
 
-main > section:nth-child(1) > div > img {
+#sec-home > div > img {
   position: absolute;
   width: 346px;
   top: 0;
@@ -118,7 +118,7 @@ main > section:nth-child(1) > div > img {
   box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
-main > section:nth-child(1) > div > div {
+#sec-home > div > div {
   position: absolute;
   top: 0;
   left: 0;
@@ -130,34 +130,34 @@ main > section:nth-child(1) > div > div {
   color: white;
 }
 
-main > section:nth-child(1) > div > div > h1 {
+#sec-home > div > div > h1 {
   font-size: 62px;
   font-weight: 700;
   display: inline;
 }
 
-main > section:nth-child(1) > div > div > h1 > mark {
+#sec-home > div > div > h1 > mark {
   background-color: transparent;
   color: #fec51c;
 }
 
-main > section:nth-child(1) > div > div > p {
+#sec-home > div > div > p {
   font-size: 26px;
   font-weight: 700;
   margin-left: 3px;
   margin-top: 10px;
 }
 
-main > section:nth-child(1) > div > div > div {
+#sec-home > div > div > div {
   margin-top: -10px;
   margin-left: -2px;
 }
 
-main > section:nth-child(1) > div > div > div > a {
+#sec-home > div > div > div > a {
   all: initial;
 }
 
-main > section:nth-child(1) > div > div > div > a > svg {
+#sec-home > div > div > div > a > svg {
   width: 50px;
   height: 50px;
   fill: white;
@@ -1432,14 +1432,14 @@ textarea {
     margin-right: 0px;
   }
 
-  main > section:nth-child(1) {
+  #sec-home {
     position: relative;
     background-image: none;
     height: 100vh;
     background-color: rgb(52, 89, 180);
   }
 
-  main > section:nth-child(1) > div {
+  #sec-home > div {
     display: flex;
     height: 482px;
 
@@ -1455,7 +1455,7 @@ textarea {
     flex-wrap: nowrap;
   }
 
-  main > section:nth-child(1) > div > img {
+  #sec-home > div > img {
     position: relative;
 
     width: 300px;
@@ -1468,7 +1468,7 @@ textarea {
     margin-top: 0px;
   }
 
-  main > section:nth-child(1) > div > div {
+  #sec-home > div > div {
     text-align: center;
     position: relative;
     height: 136px;
@@ -1479,25 +1479,25 @@ textarea {
     margin-bottom: 0px;
   }
 
-  main > section:nth-child(1) > div > div > h1 {
+  #sec-home > div > div > h1 {
     font-size: 50px;
     font-weight: 700;
     display: inline;
   }
 
-  main > section:nth-child(1) > div > div > p {
+  #sec-home > div > div > p {
     font-size: 40px;
     font-weight: 700;
     margin-left: 3px;
     margin-top: 10px;
   }
 
-  main > section:nth-child(1) > div > div > div {
+  #sec-home > div > div > div {
     margin-top: -30px;
     margin-left: 0px;
   }
 
-  main > section:nth-child(1) > div > div > div > a > svg {
+  #sec-home > div > div > div > a > svg {
     width: 50px;
     height: 53px;
     fill: white;
@@ -1777,7 +1777,7 @@ textarea {
 
 @media all and (min-width: 320px) and (max-width: 425px) {
   body > header {
-    /* display: none; */
+    display: none;
     box-shadow: none;
     z-index: 1000;
     position: relative;
@@ -1785,74 +1785,17 @@ textarea {
     right: 0px;
     left: 0px;
   }
-
-  body > header > nav {
-    font-size: 17px;
-    line-height: 3;
-  }
-
-  header > nav > ul {
-    position: fixed;
-    margin-top: 80px;
-    background-color: #222952e0;
-    touch-action: none;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    right: 500px;
-    transition: all 0.5s;
-  }
-
-  nav > ul > li {
-    background-color: #1c527e;
-    display: block !important;
-    margin-top: 15px;
-    margin-left: 0px !important;
-    margin-right: 0px;
-  }
-
-  nav > ul > li:nth-child(odd) {
-    background-color: #306fa1;
-  }
-
-  #cB {
-    /* display: inline-block; */
-    /* margin: 5px; */
-  }
-
-  .checkbtn {
-    display: block;
-    float: right;
-    color: white;
-    font-size: 26px;
-    margin-right: -145px;
-    padding: 10px;
-  }
-
-  #cB:checked ~ header > nav > ul {
-    /* left: 10px !important; */
-    /* left: 0px; */
-  }
-
-  #cB:checked ~ ul {
-    left: 10% !important;
-    color: #fec51c;
-  }
-
-  #cB:checked ~ .checkbtn {
-    /* left: 10px !important; */
-    color: #fec51c;
-  }
+  
   /* Header Start */
 
-  main > section:nth-child(1) {
+  #sec-home {
     position: relative;
     background-image: none;
     height: 100vh;
     background-color: rgb(52, 89, 180);
   }
 
-  main > section:nth-child(1) > div {
+  #sec-home > div {
     display: flex;
     height: 340px;
     /* background-color: #d62e2e; */
@@ -1868,7 +1811,7 @@ textarea {
     margin-top: 170px;
   }
 
-  main > section:nth-child(1) > div > img {
+  #sec-home > div > img {
     position: relative;
 
     width: 200px;
@@ -1881,7 +1824,7 @@ textarea {
     margin-top: 0px;
   }
 
-  main > section:nth-child(1) > div > div {
+  #sec-home > div > div {
     text-align: center;
     position: relative;
     height: 136px;
@@ -1892,25 +1835,25 @@ textarea {
     margin-bottom: 0px;
   }
 
-  main > section:nth-child(1) > div > div > h1 {
+  #sec-home > div > div > h1 {
     font-size: 35px;
     font-weight: 700;
     display: inline;
   }
 
-  /* main > section:nth-child(1) > div > div > p {
+  /* #sec-home > div > div > p {
     font-size: 26px;
     font-weight: 700;
     margin-left: 3px;
     margin-top: 10px;
   } */
 
-  main > section:nth-child(1) > div > div > div {
+  #sec-home > div > div > div {
     margin-top: -10px;
     margin-left: 0px;
   }
 
-  main > section:nth-child(1) > div > div > div > a > svg {
+  #sec-home > div > div > div > a > svg {
     width: 30px;
     height: 33px;
     fill: white;
@@ -2230,14 +2173,14 @@ textarea {
 @media all and (max-width: 320px) {
   /* Header Start */
 
-  main > section:nth-child(1) {
+  #sec-home {
     position: relative;
     background-image: none;
     height: 100vh;
     background-color: rgb(52, 89, 180);
   }
 
-  main > section:nth-child(1) > div {
+  #sec-home > div {
     display: flex;
     height: 340px;
     /* background-color: #d62e2e; */
@@ -2252,7 +2195,7 @@ textarea {
     flex-wrap: nowrap;
   }
 
-  main > section:nth-child(1) > div > img {
+  #sec-home > div > img {
     position: relative;
 
     width: 200px;
@@ -2265,7 +2208,7 @@ textarea {
     margin-top: 0px;
   }
 
-  main > section:nth-child(1) > div > div {
+  #sec-home > div > div {
     text-align: center;
     position: relative;
     height: 136px;
@@ -2276,25 +2219,25 @@ textarea {
     margin-bottom: 0px;
   }
 
-  main > section:nth-child(1) > div > div > h1 {
+  #sec-home > div > div > h1 {
     font-size: 35px;
     font-weight: 700;
     display: inline;
   }
 
-  /* main > section:nth-child(1) > div > div > p {
+  /* #sec-home > div > div > p {
       font-size: 26px;
       font-weight: 700;
       margin-left: 3px;
       margin-top: 10px;
     } */
 
-  main > section:nth-child(1) > div > div > div {
+  #sec-home > div > div > div {
     margin-top: -10px;
     margin-left: 0px;
   }
 
-  main > section:nth-child(1) > div > div > div > a > svg {
+  #sec-home > div > div > div > a > svg {
     width: 30px;
     height: 33px;
     fill: white;
