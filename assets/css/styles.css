@@ -78,6 +78,23 @@ header > nav > ul > li > a:hover {
   color: #fec51c;
 }
 
+#load {
+  z-index: 100;
+  background-color:#3459b4;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+#load > img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 /* .checkbtn {
   display: none;
 }
