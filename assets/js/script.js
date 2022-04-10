@@ -1,6 +1,6 @@
 $("html").css({'overflow':'hidden','height':'100vh'});
 
-("#mobile_menu_close_btn").hide();
+$("#mobile_menu_close_btn").hide();
 
 loading();
 
