@@ -1,5 +1,8 @@
-$(".disclaimer").hide();    //000webhost banner remove
-$("#mobile_menu_close_btn").hide();
+$("html").css({'overflow':'hidden','height':'100vh'});
+
+("#mobile_menu_close_btn").hide();
+
+loading();
 
 
 const menu = $("#sec-menu");
@@ -24,3 +27,11 @@ $("#menu_ul>li").click(function(){
     $("#mobile_menu_close_btn").hide();
     $("#mobile_menu_btn").show();
 });
+
+function loading() {
+    $(window).on('load', function () {
+        $("#load").fadeOut(1000);
+        $(".disclaimer").hide();    //000webhost banner remove
+        $("html").css({'overflow':'auto','height':'100vh'});
+    });
+}
