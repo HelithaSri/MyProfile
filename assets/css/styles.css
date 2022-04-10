@@ -13,6 +13,10 @@
   
 }
 
+.disclaimer{
+  display: none !important;
+}
+
 #top {
   position: fixed;
   top: 886px;
