@@ -1,3 +1,4 @@
+$(".disclaimer").hide();    //000webhost banner remove
 $("#mobile_menu_close_btn").hide();
 
 
