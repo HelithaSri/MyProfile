@@ -99,6 +99,12 @@ function isImage(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, c
 
 }
 
+/**
+ * @name injectCssRule
+ * @description Dynamically added CSS ID selector
+ * @param {string} elementID 
+ * @param {string} path 
+ */
 function injectCssRule(elementID, path) {
     document.styleSheets[0].insertRule(`#${elementID} {\
           background: url(${path})\
