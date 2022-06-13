@@ -7,7 +7,7 @@
             "folder": "Assignment 1",
             "file": "index.html",
             "title": "CSS Layout Designing",
-            "folder_title":true,
+            "setFullTitle":true,
             "image": ["A1.jpg"],
             "video":false,
             "tags": ["html", "css"]
@@ -16,7 +16,7 @@
             "folder": "Assignment 2",
             "file": "index.html",
             "title": "Simple Web Layout",
-            "folder_title":false,
+            "setFullTitle":false,
             "image": ["A7.webm","A7.mp4"],
             "video":true,
             "tags": ["html", "css"]
@@ -25,7 +25,7 @@
             "folder": "Assignment 3",
             "file": "index.html",
             "title": "CSS Fixed Layout",
-            "folder_title":true,
+            "setFullTitle":true,
             "image": ["A9.webm","A9.mp4"],
             "video":true,
             "tags": ["html", " css"]
@@ -34,7 +34,7 @@
             "folder": "Assignment 4",
             "file": "index.html",
             "title": "CSS Sticky Position",
-            "folder_title":true,
+            "setFullTitle":true,
             "image": ["A1.jpg"],
             "video":false,
             "tags": ["html","css"]
