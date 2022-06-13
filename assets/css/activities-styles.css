@@ -7,8 +7,12 @@
 
 #sec-activites {
   background-color: #212428;
-  height: 2802px;
+  /* height: 2802px; 60 */
+  /* max-height: max-content; */
   position: relative;
+  min-height: calc(100vh - 60px);
+  max-height: max-content;
+  padding-bottom: 60px;
 }
 
 /* Title Style Start */
@@ -92,7 +96,8 @@
 .portfolio_img {
   border-radius: 20px 20px 0px 0px;
   width: 400px;
-  height: 400px;
+  /* height: 400px; */
+  height: 365px;
 
   background-size: cover !important;
   background-position: 50% !important;
@@ -191,6 +196,12 @@
   background-repeat: no-repeat;
 } */
 
+video{
+  height: auto;
+  max-height: 365px;
+  object-fit: cover !important;
+}
+
 .portfolio_card > span {
   position: relative;
   top: 20px;
@@ -210,7 +221,7 @@
   margin-bottom: 0px;
 }
 
-#port_title {
+.port_title {
   display: flex;
   justify-content: center;
   align-items: center;
