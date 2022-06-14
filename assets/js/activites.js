@@ -111,7 +111,7 @@ function injectCssRule(elementID, path) {
       }`, 0)
 }
 
-$.ajax({
+/* $.ajax({
     // url: "projects.json",
     url: "/MyProfile/projects.json",
     method: "GET",
@@ -140,4 +140,40 @@ $.ajax({
         }
 
     }
-});
+}); */
+
+function ajaxF(path) {
+    $.ajax({
+        // url: "projects.json",
+        url: "/MyProfile/projects.json",
+        url: path,
+        method: "GET",
+        cache: false, //can disable cash 
+        success: function (resp) {
+            const activity = resp.activity;
+            const rsrc_path = activity.resources_path;
+            const folder_path = activity.folder_path;
+    
+            for (const key in activity.data) {
+                let folder = activity.data[key].folder;
+                let file = activity.data[key].file;
+                let title = activity.data[key].title;
+                let setFullTitle = activity.data[key].setFullTitle;
+                let resources = activity.data[key].resources;
+                let setVideo = activity.data[key].setVideo;
+                let tags = activity.data[key].tags;
+    
+    
+                if (setVideo) {
+                    isVideo(rsrc_path, resources, folder_path, folder, file, title, parseInt(key) + 1, tags, setFullTitle);
+    
+                } else {
+                    isImage(rsrc_path, resources, folder_path, folder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                }
+            }
+    
+        }
+    });
+}
+ajaxF("/projects.json");
+ajaxF("/MyProfile/projects.json");
