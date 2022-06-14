@@ -4,6 +4,7 @@
         "folder_path": "../myprojects/css/",
         "data": [
           {
+            "folder":"css",
             "subFolder": "Assignment 1",
             "file": "index.html",
             "title": "CSS Layout Designing",
@@ -13,7 +14,8 @@
             "tags": ["html", " css"]
           },
           {
-            "folder": "Assignment 2",
+            "folder":"css",
+            "subfolder": "Assignment 2",
             "file": "index.html",
             "title": "Simple Web Layout",
             "setFullTitle":true,
@@ -22,7 +24,8 @@
             "tags": ["html", " css"]
           },
           {
-            "folder": "Assignment 3",
+            "folder":"css",
+            "subfolder": "Assignment 3",
             "file": "index.html",
             "title": "CSS Fixed Layout",
             "setFullTitle":true,
@@ -31,7 +34,8 @@
             "tags": ["html", " css"]
           },
           {
-            "folder": "Assignment 4",
+            "folder":"css",
+            "subfolder": "Assignment 4",
             "file": "index.html",
             "title": "CSS Sticky Position",
             "setFullTitle":true,
@@ -40,7 +44,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 5",
+            "folder":"css",
+            "subfolder": "Assignment 5",
             "file": "index.html",
             "title": "Simple Web Layout Responsive",
             "setFullTitle":true,
@@ -49,7 +54,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 6",
+            "folder":"css",
+            "subfolder": "Assignment 6",
             "file": "index.html",
             "title": "CSS Transition - Navigation",
             "setFullTitle":true,
@@ -58,7 +64,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 7",
+            "folder":"css",
+            "subfolder": "Assignment 7",
             "file": "index.html",
             "title": "CSS Transition- Circle Transition",
             "setFullTitle":true,
@@ -67,7 +74,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 8",
+            "folder":"css",
+            "subfolder": "Assignment 8",
             "file": "index.html",
             "title": "Keyframe Basic",
             "setFullTitle":true,
@@ -76,7 +84,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 9",
+            "folder":"css",
+            "subfolder": "Assignment 9",
             "file": "index.html",
             "title": "Water Drop Animation",
             "setFullTitle":true,
@@ -85,7 +94,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 10",
+            "folder":"css",
+            "subfolder": "Assignment 10",
             "file": "index.html",
             "title": "CSS Slider Animation",
             "setFullTitle":true,
@@ -94,7 +104,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 11",
+            "folder":"css",
+            "subfolder": "Assignment 11",
             "file": "index.html",
             "title": "Car Animation",
             "setFullTitle":true,
@@ -103,7 +114,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 12",
+            "folder":"CSS Frameworks",
+            "subfolder": "Bootsrap Pos",
             "file": "index.html",
             "title": "POS System UI - Bootstrap",
             "setFullTitle":true,
@@ -112,7 +124,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 13",
+            "folder":"SPA",
+            "subfolder": "Assignment 13",
             "file": "index.html",
             "title": "SPA POS System",
             "setFullTitle":true,
@@ -121,7 +134,8 @@
             "tags": ["html","css"]
           },
           {
-            "folder": "Assignment 14",
+            "folder":"css",
+            "subfolder": "Assignment 14",
             "file": "index.html",
             "title": "Que Proccess",
             "setFullTitle":true,
