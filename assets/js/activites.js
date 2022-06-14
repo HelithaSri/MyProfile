@@ -112,7 +112,7 @@ function injectCssRule(elementID, path) {
 }
 
 $.ajax({
-    url: "../projects.json",
+    url: "../../projects.json",
     method: "GET",
     headers: {
         'permissions-policy':'null'
