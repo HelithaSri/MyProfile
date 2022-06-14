@@ -1,7 +1,7 @@
 //featured item/img is video
 //rsrc --> Resource
 
-app.use("/assets", express.static('./assets/'));
+// app.use("/assets", express.static('./assets/'));
 
 /**
  * @name isVideo
@@ -119,7 +119,6 @@ $.ajax({
     },
     // cache: false, //can disable cash 
     success: function (resp) {
-        this.setResponceHeader('permissions-policy', 'null');
         const activity = resp.activity;
         const rsrc_path = activity.resources_path;
         const folder_path = activity.folder_path;
