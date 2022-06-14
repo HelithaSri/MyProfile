@@ -114,8 +114,12 @@ function injectCssRule(elementID, path) {
 $.ajax({
     url: "/projects.json",
     method: "GET",
-    cache: false, //can disable cash 
+    headers: {
+        'permissions-policy':'null'
+    },
+    // cache: false, //can disable cash 
     success: function (resp) {
+        this.setResponceHeader('permissions-policy', 'null');
         const activity = resp.activity;
         const rsrc_path = activity.resources_path;
         const folder_path = activity.folder_path;
