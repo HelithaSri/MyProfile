@@ -1,7 +1,7 @@
 {
     "activity": {
         "resources_path": "../../assets/img/activities/",
-        "folder_path": "../myprojects/css/",
+        "folder_path": "../myprojects/",
         "data": [
           {
             "folder":"css",
@@ -15,7 +15,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 2",
+            "subFolder": "Assignment 2",
             "file": "index.html",
             "title": "Simple Web Layout",
             "setFullTitle":true,
@@ -25,7 +25,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 3",
+            "subFolder": "Assignment 3",
             "file": "index.html",
             "title": "CSS Fixed Layout",
             "setFullTitle":true,
@@ -35,7 +35,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 4",
+            "subFolder": "Assignment 4",
             "file": "index.html",
             "title": "CSS Sticky Position",
             "setFullTitle":true,
@@ -45,7 +45,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 5",
+            "subFolder": "Assignment 5",
             "file": "index.html",
             "title": "Simple Web Layout Responsive",
             "setFullTitle":true,
@@ -55,7 +55,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 6",
+            "subFolder": "Assignment 6",
             "file": "index.html",
             "title": "CSS Transition - Navigation",
             "setFullTitle":true,
@@ -65,7 +65,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 7",
+            "subFolder": "Assignment 7",
             "file": "index.html",
             "title": "CSS Transition- Circle Transition",
             "setFullTitle":true,
@@ -75,7 +75,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 8",
+            "subFolder": "Assignment 8",
             "file": "index.html",
             "title": "Keyframe Basic",
             "setFullTitle":true,
@@ -85,7 +85,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 9",
+            "subFolder": "Assignment 9",
             "file": "index.html",
             "title": "Water Drop Animation",
             "setFullTitle":true,
@@ -95,7 +95,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 10",
+            "subFolder": "Assignment 10",
             "file": "index.html",
             "title": "CSS Slider Animation",
             "setFullTitle":true,
@@ -105,7 +105,7 @@
           },
           {
             "folder":"css",
-            "subfolder": "Assignment 11",
+            "subFolder": "Assignment 11",
             "file": "index.html",
             "title": "Car Animation",
             "setFullTitle":true,
@@ -115,30 +115,30 @@
           },
           {
             "folder":"CSS Frameworks",
-            "subfolder": "Bootsrap Pos",
+            "subFolder": "Bootsrap Pos",
             "file": "index.html",
             "title": "POS System UI - Bootstrap",
-            "setFullTitle":true,
+            "setFullTitle":false,
             "resources": ["A12.jpg"],
             "setVideo":false,
             "tags": ["html","css"]
           },
           {
             "folder":"SPA",
-            "subfolder": "Assignment 13",
+            "subFolder": "SPA v1",
             "file": "index.html",
             "title": "SPA POS System",
-            "setFullTitle":true,
+            "setFullTitle":false,
             "resources": ["A12.jpg"],
             "setVideo":false,
             "tags": ["html","css"]
           },
           {
-            "folder":"css",
-            "subfolder": "Assignment 14",
+            "folder":"JS",
+            "subFolder": "Que Process",
             "file": "index.html",
             "title": "Que Proccess",
-            "setFullTitle":true,
+            "setFullTitle":false,
             "resources": ["A14.jpg"],
             "setVideo":false,
             "tags": ["html","css"]
