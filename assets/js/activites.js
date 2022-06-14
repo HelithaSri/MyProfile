@@ -8,6 +8,7 @@
  * @description Fetch the JSON file and the featured item in the relevant activity is a video; Dynamically add the CODE BLOCK containing the relevant video.
  * @param {string} rsrcPath
  * @param {array} rsrcNames 
+ * @param {string} folder 
  * @param {string} subFolderPath 
  * @param {string} folderName 
  * @param {string} fileName 
@@ -17,7 +18,7 @@
  * @param {boolean} setTitle 
  */
 
-function isVideo(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
+function isVideo(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
     let activeTitle;
     let sourceArray = [];
     console.log("currentI " + currentIndex);
@@ -34,7 +35,7 @@ function isVideo(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title
     // add paths to the sources
     for (const i in rsrcNames) {
         let source;
-        let path =rsrcPath.join("/") + rsrcNames[i];
+        let path = rsrcPath.join("/") + rsrcNames[i];
         let fileExtention = rsrcNames[i].split(".")[1];
 
         if (fileExtention == "webm") {
@@ -47,7 +48,7 @@ function isVideo(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title
         console.log(sourceArray);
     }
 
-    let code_block = `<a href="${subFolderPath + folderName + "/" + fileName}">
+    let code_block = `<a href="${subFolderPath + folder + "/" + folderName + "/" + fileName}">
     <div class="portfolio_card">
       
       <video id="${currentIndex}" autoplay loop muted playsinline  class="portfolio_img videos">
@@ -69,6 +70,7 @@ function isVideo(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title
  * @description Fetch the JSON file and the featured item in the relevant activity is a video; Dynamically add the CODE BLOCK containing the relevant video.
  * @param {string} rsrcPath
  * @param {array} rsrcNames 
+ * @param {string} folder 
  * @param {string} subFolderPath 
  * @param {string} folderName 
  * @param {string} fileName 
@@ -77,7 +79,7 @@ function isVideo(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title
  * @param {array} tags 
  * @param {boolean} setTitle 
  */
-function isImage(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
+function isImage(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
     let activeTitle;
     let elementID = "port_img" + "" + currentIndex;
     let path = rsrcPath + rsrcNames;
@@ -89,7 +91,7 @@ function isImage(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title
         activeTitle = title;
     }
 
-    let code_block = `<a href="${subFolderPath + folderName + "/" + fileName}">
+    let code_block = `<a href="${subFolderPath + folder +"/"+ folderName + "/" + fileName}">
   <div class="portfolio_card">
     <div id="${elementID}" class="portfolio_img"></div>
     <span><i class="fas fa-tag"></i>${tags}</span>
@@ -122,7 +124,7 @@ function injectCssRule(elementID, path) {
     success: function (resp) {
         const activity = resp.activity;
         const rsrc_path = activity.resources_path;
-        const subFolder_path = activity.subFolder_path;
+        const folder_path = activity.folder_path;
 
         for (const key in activity.data) {
             let subFolder = activity.data[key].subFolder;
@@ -135,10 +137,10 @@ function injectCssRule(elementID, path) {
 
 
             if (setVideo) {
-                isVideo(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                isVideo(rsrc_path, resources, folder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
 
             } else {
-                isImage(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                isImage(rsrc_path, resources, folder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
             }
         }
 
@@ -151,30 +153,31 @@ function ajaxF(path) {
         url: "/MyProfile/projects.json",
         url: path,
         method: "GET",
-        cache: false, //can disable cash 
+        // cache: false, //can disable cash 
         success: function (resp) {
             const activity = resp.activity;
             const rsrc_path = activity.resources_path;
-            const subFolder_path = activity.subFolder_path;
-    
+            const folder_path = activity.folder_path;
+
             for (const key in activity.data) {
+                let folder = activity.data[key].folder;
                 let subFolder = activity.data[key].subFolder;
                 let file = activity.data[key].file;
                 let title = activity.data[key].title;
                 let setFullTitle = activity.data[key].setFullTitle;
                 let resources = activity.data[key].resources;
                 let setVideo = activity.data[key].setVideo;
-                let tags = activity.data[key].tags;
-    
-    
+                let tags = activity.data[key].tags.join(" , ");
+
+
                 if (setVideo) {
-                    isVideo(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
-    
+                    isVideo(rsrc_path, resources, folder, folder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
+
                 } else {
-                    isImage(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                    isImage(rsrc_path, resources, folder, folder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
                 }
             }
-    
+
         }
     });
 }
