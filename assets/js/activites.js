@@ -112,7 +112,8 @@ function injectCssRule(elementID, path) {
 }
 
 $.ajax({
-    url: "../../projects.json",
+    // url: "../../projects.json",
+    url: "https://raw.githubusercontent.com/HelithaSri/MyProfile/d4bbe0fe61d7edf798fb3142ce389fd8dd70b03e/projects.json",
     method: "GET",
     headers: {
         'permissions-policy':'null'
