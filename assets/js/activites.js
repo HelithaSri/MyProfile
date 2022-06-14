@@ -78,7 +78,7 @@ function isImage(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, c
     let activeTitle;
     let elementID = "port_img" + "" + currentIndex;
     let path = rsrcPath + rsrcNames;
-
+    console.log(path);
     // Check title is full or half and assign it to ActiveTitle
     if (setTitle) {
         activeTitle = folderName + " - " + title;
