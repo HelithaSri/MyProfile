@@ -209,6 +209,7 @@ video{
   font-weight: 700;
   margin: 20px;
   color: #fec51c;
+  text-transform: uppercase;
 }
 
 .portfolio_card > span > i {
