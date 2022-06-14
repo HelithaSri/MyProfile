@@ -114,7 +114,7 @@ function injectCssRule(elementID, path) {
 $.ajax({
     url: "/MyProfile/projects.json",
     method: "GET",
-    // cache: false, //can disable cash 
+    cache: false, //can disable cash 
     success: function (resp) {
         const activity = resp.activity;
         const rsrc_path = activity.resources_path;
