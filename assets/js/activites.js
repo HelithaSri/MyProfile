@@ -28,10 +28,13 @@ function isVideo(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, c
         activeTitle = title;
     }
 
+    rsrcPath = rsrcPath.split("/");
+    rsrcPath.shift();
+
     // add paths to the sources
     for (const i in rsrcNames) {
         let source;
-        let path =rsrcPath + rsrcNames[i];
+        let path =rsrcPath.join("/") + rsrcNames[i];
         let fileExtention = rsrcNames[i].split(".")[1];
 
         if (fileExtention == "webm") {
