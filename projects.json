@@ -4,7 +4,7 @@
         "folder_path": "../myprojects/css/",
         "data": [
           {
-            "folder": "Assignment 1",
+            "subFolder": "Assignment 1",
             "file": "index.html",
             "title": "CSS Layout Designing",
             "setFullTitle":true,

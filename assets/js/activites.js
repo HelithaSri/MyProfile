@@ -8,7 +8,7 @@
  * @description Fetch the JSON file and the featured item in the relevant activity is a video; Dynamically add the CODE BLOCK containing the relevant video.
  * @param {string} rsrcPath
  * @param {array} rsrcNames 
- * @param {string} folderPath 
+ * @param {string} subFolderPath 
  * @param {string} folderName 
  * @param {string} fileName 
  * @param {string} title 
@@ -17,7 +17,7 @@
  * @param {boolean} setTitle 
  */
 
-function isVideo(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
+function isVideo(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
     let activeTitle;
     let sourceArray = [];
     console.log("currentI " + currentIndex);
@@ -47,7 +47,7 @@ function isVideo(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, c
         console.log(sourceArray);
     }
 
-    let code_block = `<a href="${folderPath + folderName + "/" + fileName}">
+    let code_block = `<a href="${subFolderPath + folderName + "/" + fileName}">
     <div class="portfolio_card">
       
       <video id="${currentIndex}" autoplay loop muted playsinline  class="portfolio_img videos">
@@ -69,7 +69,7 @@ function isVideo(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, c
  * @description Fetch the JSON file and the featured item in the relevant activity is a video; Dynamically add the CODE BLOCK containing the relevant video.
  * @param {string} rsrcPath
  * @param {array} rsrcNames 
- * @param {string} folderPath 
+ * @param {string} subFolderPath 
  * @param {string} folderName 
  * @param {string} fileName 
  * @param {string} title 
@@ -77,7 +77,7 @@ function isVideo(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, c
  * @param {array} tags 
  * @param {boolean} setTitle 
  */
-function isImage(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
+function isImage(rsrcPath, rsrcNames, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
     let activeTitle;
     let elementID = "port_img" + "" + currentIndex;
     let path = rsrcPath + rsrcNames;
@@ -89,7 +89,7 @@ function isImage(rsrcPath, rsrcNames, folderPath, folderName, fileName, title, c
         activeTitle = title;
     }
 
-    let code_block = `<a href="${folderPath + folderName + "/" + fileName}">
+    let code_block = `<a href="${subFolderPath + folderName + "/" + fileName}">
   <div class="portfolio_card">
     <div id="${elementID}" class="portfolio_img"></div>
     <span><i class="fas fa-tag"></i>${tags}</span>
@@ -122,10 +122,10 @@ function injectCssRule(elementID, path) {
     success: function (resp) {
         const activity = resp.activity;
         const rsrc_path = activity.resources_path;
-        const folder_path = activity.folder_path;
+        const subFolder_path = activity.subFolder_path;
 
         for (const key in activity.data) {
-            let folder = activity.data[key].folder;
+            let subFolder = activity.data[key].subFolder;
             let file = activity.data[key].file;
             let title = activity.data[key].title;
             let setFullTitle = activity.data[key].setFullTitle;
@@ -135,10 +135,10 @@ function injectCssRule(elementID, path) {
 
 
             if (setVideo) {
-                isVideo(rsrc_path, resources, folder_path, folder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                isVideo(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
 
             } else {
-                isImage(rsrc_path, resources, folder_path, folder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                isImage(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
             }
         }
 
@@ -155,10 +155,10 @@ function ajaxF(path) {
         success: function (resp) {
             const activity = resp.activity;
             const rsrc_path = activity.resources_path;
-            const folder_path = activity.folder_path;
+            const subFolder_path = activity.subFolder_path;
     
             for (const key in activity.data) {
-                let folder = activity.data[key].folder;
+                let subFolder = activity.data[key].subFolder;
                 let file = activity.data[key].file;
                 let title = activity.data[key].title;
                 let setFullTitle = activity.data[key].setFullTitle;
@@ -168,10 +168,10 @@ function ajaxF(path) {
     
     
                 if (setVideo) {
-                    isVideo(rsrc_path, resources, folder_path, folder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                    isVideo(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
     
                 } else {
-                    isImage(rsrc_path, resources, folder_path, folder, file, title, parseInt(key) + 1, tags, setFullTitle);
+                    isImage(rsrc_path, resources, subFolder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
                 }
             }
     
