@@ -1,6 +1,6 @@
 {
     "activity": {
-        "resources_path": "MyProfile/img/activities/",
+        "resources_path": "../../img/activities/",
         "folder_path": "../myprojects/css/",
         "data": [
           {
