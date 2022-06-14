@@ -1,7 +1,7 @@
 //featured item/img is video
 //rsrc --> Resource
 
-
+app.use("/assets", express.static('./assets/'));
 
 /**
  * @name isVideo
