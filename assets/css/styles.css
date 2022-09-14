@@ -583,8 +583,8 @@ address>li {
   justify-content: space-evenly;
   align-items: center;
   flex-shrink: 0;
-  flex-basis: 3107px;
-  margin-left: 1828px;
+  flex-basis: 3445px;
+  margin-left: 2175px;
   /* animation-name: scroll;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -596,11 +596,11 @@ address>li {
 
 @keyframes scroll {
   from {
-    margin-left: 1828px;
+    margin-left: 2175px;
   }
 
   to {
-    margin-left: -1821px;
+    margin-left: -2175px;
   }
 }
 
@@ -660,7 +660,7 @@ address>li {
 }
 
 #img_6 {
-  background-image: url("../img/skill_img/python.png");
+  background-image: url("../img/skill_img/Expressjs.png");
 }
 
 #img_7 {
@@ -678,6 +678,15 @@ address>li {
 #img_10 {
   background-image: url("../img/skill_img/adobe\ illustrator.png");
 }
+
+#img_11 {
+  background-image: url("../img/skill_img/React.png");
+}
+
+#img_12 {
+  background-image: url("../img/skill_img/nodejs.png");
+}
+
 
 /* Skill Section End */
 
