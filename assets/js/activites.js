@@ -48,7 +48,7 @@ function isVideo(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileNam
         console.log(sourceArray);
     }
 
-    let code_block = `<a href="${subFolderPath + folder + "/" + folderName + "/" + fileName}">
+    let code_block = `<a href="${subFolderPath + folder + "/" + folderName + "/" + fileName}" data-aos="fade-up" data-aos-duration="2000">
     <div class="portfolio_card">
       
       <video id="${currentIndex}" autoplay loop muted playsinline  class="portfolio_img videos">
@@ -91,7 +91,7 @@ function isImage(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileNam
         activeTitle = title;
     }
 
-    let code_block = `<a href="${subFolderPath + folder +"/"+ folderName + "/" + fileName}">
+    let code_block = `<a href="${subFolderPath + folder +"/"+ folderName + "/" + fileName}" data-aos="fade-up" data-aos-duration="2000">
   <div class="portfolio_card">
     <div id="${elementID}" class="portfolio_img"></div>
     <span><i class="fas fa-tag"></i>${tags}</span>

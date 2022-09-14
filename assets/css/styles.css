@@ -2130,8 +2130,8 @@ textarea {
     justify-content: space-evenly;
     align-items: center;
     flex-shrink: 0;
-    flex-basis: 3107px;
-    margin-left: 1828px;
+    flex-basis: 3837px;
+    margin-left: 2175px;
     animation: scroll 10s linear alternate;
     animation-iteration-count: infinite;
     animation-delay: 2s;
@@ -2140,11 +2140,11 @@ textarea {
 
   @keyframes scroll {
     from {
-      margin-top: 2450px;
+      margin-top: 3200px;
     }
 
     to {
-      margin-top: -2450px;
+      margin-top: -3200px;
     }
   }
 
