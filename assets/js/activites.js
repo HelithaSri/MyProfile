@@ -7,15 +7,15 @@
  * @name isVideo
  * @description Fetch the JSON file and the featured item in the relevant activity is a video; Dynamically add the CODE BLOCK containing the relevant video.
  * @param {string} rsrcPath
- * @param {array} rsrcNames 
- * @param {string} folder 
- * @param {string} subFolderPath 
- * @param {string} folderName 
- * @param {string} fileName 
- * @param {string} title 
- * @param {int} key 
- * @param {array} tags 
- * @param {boolean} setTitle 
+ * @param {array} rsrcNames
+ * @param {string} folder
+ * @param {string} subFolderPath
+ * @param {string} folderName
+ * @param {string} fileName
+ * @param {string} title
+ * @param {int} key
+ * @param {array} tags
+ * @param {boolean} setTitle
  */
 
 function isVideo(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
@@ -48,7 +48,7 @@ function isVideo(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileNam
         console.log(sourceArray);
     }
 
-    let code_block = `<a href="${subFolderPath + folder + "/" + folderName + "/" + fileName}" data-aos="fade-up" data-aos-duration="2000">
+    let code_block = `<a href="${subFolderPath + folder + "/" + folderName + "/" + fileName}">
     <div class="portfolio_card">
       
       <video id="${currentIndex}" autoplay loop muted playsinline  class="portfolio_img videos">
@@ -69,15 +69,15 @@ function isVideo(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileNam
  * @name isImage
  * @description Fetch the JSON file and the featured item in the relevant activity is a video; Dynamically add the CODE BLOCK containing the relevant video.
  * @param {string} rsrcPath
- * @param {array} rsrcNames 
- * @param {string} folder 
- * @param {string} subFolderPath 
- * @param {string} folderName 
- * @param {string} fileName 
- * @param {string} title 
- * @param {int} key 
- * @param {array} tags 
- * @param {boolean} setTitle 
+ * @param {array} rsrcNames
+ * @param {string} folder
+ * @param {string} subFolderPath
+ * @param {string} folderName
+ * @param {string} fileName
+ * @param {string} title
+ * @param {int} key
+ * @param {array} tags
+ * @param {boolean} setTitle
  */
 function isImage(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileName, title, currentIndex, tags, setTitle) {
     let activeTitle;
@@ -91,7 +91,7 @@ function isImage(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileNam
         activeTitle = title;
     }
 
-    let code_block = `<a href="${subFolderPath + folder +"/"+ folderName + "/" + fileName}" data-aos="fade-up" data-aos-duration="2000">
+    let code_block = `<a href="${subFolderPath + folder +"/"+ folderName + "/" + fileName}">
   <div class="portfolio_card">
     <div id="${elementID}" class="portfolio_img"></div>
     <span><i class="fas fa-tag"></i>${tags}</span>
@@ -107,8 +107,8 @@ function isImage(rsrcPath, rsrcNames, folder, subFolderPath, folderName, fileNam
 /**
  * @name injectCssRule
  * @description Dynamically added CSS ID selector
- * @param {string} elementID 
- * @param {string} path 
+ * @param {string} elementID
+ * @param {string} path
  */
 function injectCssRule(elementID, path) {
     document.styleSheets[0].insertRule(`#${elementID} {\
@@ -150,7 +150,7 @@ function injectCssRule(elementID, path) {
 function ajaxF(path) {
     $.ajax({
         // url: "projects.json",
-        url: "/MyProfile/projects.json",
+        // url: "/MyProfile/projects.json",
         url: path,
         method: "GET",
         // cache: false, //can disable cash 
@@ -168,10 +168,11 @@ function ajaxF(path) {
                 let resources = activity.data[key].resources;
                 let setVideo = activity.data[key].setVideo;
                 let tags = activity.data[key].tags.join(" , ");
-
+                console.log('title',title)
 
                 if (setVideo) {
                     isVideo(rsrc_path, resources, folder, folder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
+
 
                 } else {
                     isImage(rsrc_path, resources, folder, folder_path, subFolder, file, title, parseInt(key) + 1, tags, setFullTitle);
@@ -181,5 +182,5 @@ function ajaxF(path) {
         }
     });
 }
-ajaxF("/projects.json");
+// ajaxF("/projects.json");
 ajaxF("/MyProfile/projects.json");

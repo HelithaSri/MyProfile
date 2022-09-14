@@ -1,148 +1,148 @@
 {
-    "activity": {
-        "resources_path": "../../assets/img/activities/",
-        "folder_path": "../myprojects/",
-        "data": [
-          {
-            "folder":"css",
-            "subFolder": "Assignment 1",
-            "file": "index.html",
-            "title": "CSS Layout Designing",
-            "setFullTitle":true,
-            "resources": ["A1.jpg"],
-            "setVideo":false,
-            "tags": ["html", " css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 2",
-            "file": "index.html",
-            "title": "Simple Web Layout",
-            "setFullTitle":true,
-            "resources": ["A2.jpg"],
-            "setVideo":false,
-            "tags": ["html", " css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 3",
-            "file": "index.html",
-            "title": "CSS Fixed Layout",
-            "setFullTitle":true,
-            "resources": ["A3.jpg"],
-            "setVideo":false,
-            "tags": ["html", " css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 4",
-            "file": "index.html",
-            "title": "CSS Sticky Position",
-            "setFullTitle":true,
-            "resources": ["A4.jpg"],
-            "setVideo":false,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 5",
-            "file": "index.html",
-            "title": "Simple Web Layout Responsive",
-            "setFullTitle":true,
-            "resources": ["A5.jpg"],
-            "setVideo":false,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 6",
-            "file": "index.html",
-            "title": "CSS Transition - Navigation",
-            "setFullTitle":true,
-            "resources": ["A6.webm","A6.mp4"],
-            "setVideo":true,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 7",
-            "file": "index.html",
-            "title": "CSS Transition- Circle Transition",
-            "setFullTitle":true,
-            "resources": ["A7.webm","A7.mp4"],
-            "setVideo":true,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 8",
-            "file": "index.html",
-            "title": "Keyframe Basic",
-            "setFullTitle":true,
-            "resources": ["A8.webm","A8.mp4"],
-            "setVideo":true,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 9",
-            "file": "index.html",
-            "title": "Water Drop Animation",
-            "setFullTitle":true,
-            "resources": ["A9.webm","A9.mp4"],
-            "setVideo":true,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 10",
-            "file": "index.html",
-            "title": "CSS Slider Animation",
-            "setFullTitle":true,
-            "resources": ["A10.webm","A10.mp4"],
-            "setVideo":true,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"css",
-            "subFolder": "Assignment 11",
-            "file": "index.html",
-            "title": "Car Animation",
-            "setFullTitle":true,
-            "resources": ["A11.webm","A11.mp4"],
-            "setVideo":true,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"CSS Frameworks",
-            "subFolder": "Bootsrap Pos",
-            "file": "index.html",
-            "title": "POS System UI - Bootstrap",
-            "setFullTitle":false,
-            "resources": ["A12.jpg"],
-            "setVideo":false,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"SPA",
-            "subFolder": "SPA v1",
-            "file": "index.html",
-            "title": "SPA POS System",
-            "setFullTitle":false,
-            "resources": ["A12.jpg"],
-            "setVideo":false,
-            "tags": ["html","css"]
-          },
-          {
-            "folder":"JS",
-            "subFolder": "Que Process",
-            "file": "index.html",
-            "title": "Que Proccess",
-            "setFullTitle":false,
-            "resources": ["A14.jpg"],
-            "setVideo":false,
-            "tags": ["html","css"]
-          }
-        ]
+  "activity": {
+    "resources_path": "../../assets/img/activities/",
+    "folder_path": "../myprojects/",
+    "data": [
+      {
+        "folder":"css",
+        "subFolder": "Assignment 1",
+        "file": "index.html",
+        "title": "CSS Layout Designing",
+        "setFullTitle":true,
+        "resources": ["A1.jpg"],
+        "setVideo":false,
+        "tags": ["html", " css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 2",
+        "file": "index.html",
+        "title": "Simple Web Layout",
+        "setFullTitle":true,
+        "resources": ["A2.jpg"],
+        "setVideo":false,
+        "tags": ["html", " css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 3",
+        "file": "index.html",
+        "title": "CSS Fixed Layout",
+        "setFullTitle":true,
+        "resources": ["A3.jpg"],
+        "setVideo":false,
+        "tags": ["html", " css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 4",
+        "file": "index.html",
+        "title": "CSS Sticky Position",
+        "setFullTitle":true,
+        "resources": ["A4.jpg"],
+        "setVideo":false,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 5",
+        "file": "index.html",
+        "title": "Simple Web Layout Responsive",
+        "setFullTitle":true,
+        "resources": ["A5.jpg"],
+        "setVideo":false,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 6",
+        "file": "index.html",
+        "title": "CSS Transition - Navigation",
+        "setFullTitle":true,
+        "resources": ["A6.webm","A6.mp4"],
+        "setVideo":true,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 7",
+        "file": "index.html",
+        "title": "CSS Transition- Circle Transition",
+        "setFullTitle":true,
+        "resources": ["A7.webm","A7.mp4"],
+        "setVideo":true,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 8",
+        "file": "index.html",
+        "title": "Keyframe Basic",
+        "setFullTitle":true,
+        "resources": ["A8.webm","A8.mp4"],
+        "setVideo":true,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 9",
+        "file": "index.html",
+        "title": "Water Drop Animation",
+        "setFullTitle":true,
+        "resources": ["A9.webm","A9.mp4"],
+        "setVideo":true,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 10",
+        "file": "index.html",
+        "title": "CSS Slider Animation",
+        "setFullTitle":true,
+        "resources": ["A10.webm","A10.mp4"],
+        "setVideo":true,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"css",
+        "subFolder": "Assignment 11",
+        "file": "index.html",
+        "title": "Car Animation",
+        "setFullTitle":true,
+        "resources": ["A11.webm","A11.mp4"],
+        "setVideo":true,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"CSS Frameworks",
+        "subFolder": "Bootsrap Pos",
+        "file": "index.html",
+        "title": "POS System UI - Bootstrap",
+        "setFullTitle":false,
+        "resources": ["A12.jpg"],
+        "setVideo":false,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"SPA",
+        "subFolder": "SPA v1",
+        "file": "index.html",
+        "title": "SPA POS System",
+        "setFullTitle":false,
+        "resources": ["A12.jpg"],
+        "setVideo":false,
+        "tags": ["html","css"]
+      },
+      {
+        "folder":"JS",
+        "subFolder": "Que Process",
+        "file": "index.html",
+        "title": "Que Proccess",
+        "setFullTitle":false,
+        "resources": ["A14.jpg"],
+        "setVideo":false,
+        "tags": ["html","css"]
       }
+    ]
+  }
 }
