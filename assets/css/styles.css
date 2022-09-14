@@ -2328,11 +2328,18 @@ textarea {
   }
 
   .footer-wrap {
-    transform: scale(0.6);
+    /*transform: scale(0.6);*/
+  }
+
+  #pic{
+    margin-top: 30px;
+    height: 100px;
+    width: 100px;
   }
 
   #footer_p {
-    width: 485px;
+    /*width: 485px;*/
+    font-size: medium;
   }
 }
 
