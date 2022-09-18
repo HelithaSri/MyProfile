@@ -215,6 +215,20 @@ header>nav>ul>li>a:hover {
   position: relative;
 }
 
+#sec-home {
+  background-image: url("../svg/undraw_programming_re_kg9v.svg");
+  /* height: 857px; */
+  background-size: 700px;
+  background-position: center;
+  height: 92vh;
+  background-position-x: 1100px;
+  /*background-position: right;*/
+  /*background-position-x: 1000px;*/
+  background-repeat: no-repeat;
+  background-color: rgb(52, 89, 180);
+  position: relative;
+}
+
 #sec-home>div {
   position: absolute;
   top: 0;
