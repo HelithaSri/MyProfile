@@ -191,25 +191,26 @@ header>nav>ul>li>a:hover {
 
 }
 
-/*#sec-home {
+#sec-home {
   background-image: url("../img/covers.png");
-  !* height: 857px; *!
+  /* height: 857px; */
   height: 92vh;
   background-position-x: right;
   background-repeat: no-repeat;
   background-color: rgb(52, 89, 180);
   position: relative;
-}*/
+}
 
+/*
 #sec-home {
   background-image: url("../svg/undraw_code_thinking_re_gka2.svg");
-  /* height: 857px; */
+  !* height: 857px; *!
   background-size: 1000px;
   background-position: center;
   height: 92vh;
   background-position-x: 1250px;
-  /*background-position: right;*/
-  /*background-position-x: 1000px;*/
+  !*background-position: right;*!
+  !*background-position-x: 1000px;*!
   background-repeat: no-repeat;
   background-color: rgb(52, 89, 180);
   position: relative;
@@ -217,17 +218,18 @@ header>nav>ul>li>a:hover {
 
 #sec-home {
   background-image: url("../svg/undraw_programming_re_kg9v.svg");
-  /* height: 857px; */
+  !* height: 857px; *!
   background-size: 700px;
   background-position: center;
   height: 92vh;
   background-position-x: 1100px;
-  /*background-position: right;*/
-  /*background-position-x: 1000px;*/
+  !*background-position: right;*!
+  !*background-position-x: 1000px;*!
   background-repeat: no-repeat;
   background-color: rgb(52, 89, 180);
   position: relative;
 }
+*/
 
 #sec-home>div {
   position: absolute;
