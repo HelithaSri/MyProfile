@@ -125,7 +125,7 @@
             <ul class="remove-list">
               <li>First Name : <span>Helitha</span></li>
               <li>Last Name : <span>Praveen</span></li>
-              <li>Age : <span>21 Years</span></li>
+              <li>Age : <span id="age">21 Years</span></li>
             </ul>
           </td>
           <td>
@@ -680,8 +680,39 @@
 </svg>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+
+  $("#age").text(calAge()+" Years")
+
+  function calAge(){
+    var birthDate = new Date(2000,8,7);
+    var currentDate = new Date();
+
+    // The age in years
+    var age = currentDate.getFullYear() - birthDate.getFullYear();
+    console.log(age)
+    // Compare the months
+    var month = currentDate.getMonth() - birthDate.getMonth();
+    console.log(month)
+    // Compare the days
+    var day = currentDate.getDate() - birthDate.getDate();
+    console.log(day)
+    // If the date has already happened this year
+    if ( month < 0 || month == 0 && day < 0 )
+    {
+      age--;
+    }
+
+    return age;
+  }
+</script>
+
 <script>
   AOS.init();
 </script>
+
+
 
 </html>
